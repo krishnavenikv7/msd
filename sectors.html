@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobPort - Your Career Gateway</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(240, 240, 240, 0.9), rgba(217, 217, 217, 0.9)), url('transparent-bg.png');
+            background-size: cover;
+            background-position: center;
+            transition: background 0.3s ease;
+            font-size: 16px;
+            color: #333;
+        }
+
+        ::selection {
+            background: #0077b6;
+            color: white;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #252525;
+            padding: 15px 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd900;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            cursor: pointer;
+            margin-left: auto; /* Push the profile section to the right */
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffd900;
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.5);
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 70px; /* Adjust based on navbar height */
+            right: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            width: 200px;
+            padding: 10px 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown-menu a i {
+            margin-right: 10px;
+            color: #0077b6;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-overlay {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            animation: slideInDown 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            animation: slideInUp 1.5s ease-in-out;
+        }
+
+        .sector-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 2s ease-in-out;
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+        }
+
+        .sector-buttons .btn {
+            background-color: #ffd900;
+            color: #252525;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            border: none;
+            outline: none;
+        }
+
+        .sector-buttons .btn:hover {
+            background-color: #e6c200;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Features Section */
+        .features {
+            text-align: center;
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .features h2 {
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: #0077b6;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: fadeInUp 2s ease-in-out;
+            break-inside: avoid; /* Prevent items from breaking across columns */
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-item i {
+            font-size: 3rem;
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 100px 20px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #0077b6;
+        }
+
+        .about-us p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Contact Us Section */
+        .contact-us {
+            padding: 100px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .contact-us h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #0077b6;
+        }
+
+        .contact-us p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #252525;
+            text-align: center;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .back-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .sector-buttons .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            .feature-item {
+                padding: 20px;
+                font-size: 0.9rem;
+            }
+
+            .about-us p, .contact-us p {
+                font-size: 1rem;
+            }
+
+            .features h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .navbar {
+                padding: 15px;
+            }
+
+            .sector-buttons .btn {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+
+            .feature-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="sectors.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="companies.html">Companies</a>
+            <a href="resume.html">Create Resume</a>
+        </div>
+        <div class="profile" onmouseover="showDropdown()" onmouseout="hideDropdown()">
+            <img src="default-profile.jpg" alt="Profile Picture" id="profile-img">
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="my-profile.html"><i class="fas fa-user"></i> My Profile</a>
+                <a href="my-resume.html"><i class="fas fa-file-alt"></i> My Resume</a>
+                <a href="jobs-applied.html"><i class="fas fa-briefcase"></i>Jobs/Internships Applied</a>
+                <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Sector Buttons -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>JobPort - Your Career Gateway</h1>
+            <p>Empowering job seekers and employers to connect, collaborate, and achieve their career goals.</p>
+            <div class="sector-buttons">
+                <button class="btn" onclick="window.location.href='private-sector.html'">Private Sector</button>
+                <button class="btn" onclick="window.location.href='government-sector.html'">Government Sector</button>
+                <button class="btn" onclick="window.location.href='intern.html'">Internships</button>
+            </div>
+        </div>
+    </section><br>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <i class="fas fa-search"></i>
+                <h3>Job Search</h3>
+                <p>Find your dream job with our advanced search and filtering options tailored to your skills and preferences.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-user-tie"></i>
+                <h3>Profile Management</h3>
+                <p>Create and manage your professional profile to showcase your skills, experience, and achievements.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-building"></i>
+                <h3>Company Profiles</h3>
+                <p>Explore detailed company profiles to learn about their culture, values, and job opportunities.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-bell"></i>
+                <h3>Job Alerts</h3>
+                <p>Get notified about the latest job openings that match your criteria, so you never miss an opportunity.</p>
+            </div>
+        </div>
+    </section><br>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About JobPort</h2>
+        <p>JobPort is your one-stop destination for connecting with top employers and finding career opportunities. Whether you're looking for a job in the private sector, government, or seeking internships, we've got you covered.</p>
+    </section><br>
+
+    <!-- Contact Us Section -->
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us. We are here to help you on your career journey!</p>
+        <a href="contact-us.html">Contact US</a>
+    </section><br>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 JobPort. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Show dropdown menu on hover
+        function showDropdown() {
+            document.getElementById('dropdown-menu').style.display = 'block';
+        }
+
+        // Hide dropdown menu when not hovering
+        function hideDropdown() {
+            document.getElementById('dropdown-menu').style.display = 'none';
+        }
+
+        // Logout function
+        function logout() {
+            window.location.href = 'login.php';
+        }
+    </script>
+</body>
+</html>
