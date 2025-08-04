@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinary & Animal Health</title>
+
+    <!-- Embedded Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f7f2; /* Soft beige background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #dcedc8, #c5e1a5); /* Soft green gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+
+        /* Available Roles Section */
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+
+        /* Job Card Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+
+        /* Individual Job Cards */
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Custom Background Colors for Job Cards (Soft Green and Beige Tones) */
+        .job-card:nth-child(1) { background-color: #dcedc8; } /* Light green */
+        .job-card:nth-child(2) { background-color: #f0f4c3; } /* Pale yellow-green */
+        .job-card:nth-child(3) { background-color: #fff8e7; } /* Cream */
+        .job-card:nth-child(4) { background-color: #f5f5f5; } /* White smoke */
+        .job-card:nth-child(5) { background-color: #e8f5e9; } /* Subtle green */
+        .job-card:nth-child(6) { background-color: #ffffff; } /* Pure white */
+        .job-card:nth-child(7) { background-color: #f1f8e9; } /* Soft lime */
+        .job-card:nth-child(8) { background-color: #f9fbe7; } /* Warm beige */
+        .job-card:nth-child(9) { background-color: #e8eaf6; } /* Pale indigo */
+        .job-card:nth-child(10) { background-color: #f5f5fc; } /* Very light purple */
+        .job-card:nth-child(11) { background-color: #fffafa; } /* Snow white */
+        .job-card:nth-child(12) { background-color: #e0f7fa; } /* Baby blue */
+
+        /* Hover Effects for Job Cards */
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Job Card Content Styling */
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+
+        /* Button Styling */
+        .job-card button {
+            background-color: #c5e1a5; /* Soft green for buttons */
+            color: black; /* Black text color */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #8bc34a; /* Vibrant green on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Veterinary & Animal Health</h1>
+        <p>
+            Veterinary and Animal Health focus on providing medical care, research, and support for animals. 
+            This field includes clinical practice, animal welfare, diagnostics, and public health initiatives. 
+            Freshers earn ₹3–7 lakh, mid-level professionals ₹7–15 lakh, and experienced veterinarians ₹15–30 lakh. Senior roles can exceed ₹50 lakh annually.
+        </p>
+    </header>
+
+    <!-- Available Roles Section -->
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Veterinarian</h2>
+                <p>Provide medical care and treatment for animals in clinics or farms.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Veterinary Surgeon</h2>
+                <p>Perform surgeries on animals to treat injuries and diseases.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Animal Nutritionist</h2>
+                <p>Develop dietary plans to improve the health and performance of animals.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Veterinary Technician</h2>
+                <p>Assist veterinarians with diagnostics, treatments, and surgeries.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Zoo Veterinarian</h2>
+                <p>Care for animals in zoos and wildlife sanctuaries.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Animal Welfare Officer</h2>
+                <p>Ensure the ethical treatment and well-being of animals in various settings.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Veterinary Pathologist</h2>
+                <p>Study diseases in animals through laboratory testing and diagnosis.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Livestock Consultant</h2>
+                <p>Advise farmers on animal health, breeding, and management practices.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Pet Behavior Specialist</h2>
+                <p>Help pet owners address behavioral issues in their animals.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Veterinary Researcher</h2>
+                <p>Conduct research to advance animal health and veterinary science.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Wildlife Veterinarian</h2>
+                <p>Provide medical care to wild animals and assist in conservation efforts.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Veterinary Pharmacist</h2>
+                <p>Develop and dispense medications for animal health.</p>
+                <button>Go to</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

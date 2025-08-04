@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software & IT Fields</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3e5f5; /* Apply soft pinkish-purple background */
+            color: #333;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Full viewport height */
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px; /* Limit maximum width for better readability */
+            text-align: center; /* Ensure text inside is centered */
+        }
+        header {
+            background: linear-gradient(135deg, #4A90E2, #6BAED9);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .field-container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Reset alignment for content inside */
+        }
+        .software-development-section {
+            background-color: #ede7f6; /* Light purple background */
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem; /* Add spacing between sections */
+        }
+        .field-description {
+            margin-bottom: 1.5rem;
+        }
+        .role-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center; /* Center role boxes */
+        }
+        .role-box {
+            background: #4A90E2;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .search-jobs {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .search-jobs input {
+            padding: 0.5rem;
+            width: 60%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .job-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            padding-top: 1rem;
+            justify-content: center; /* Center job cards */
+        }
+        .job-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .job-card button {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #357ABD;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Software & IT Fields</header>
+
+        <!-- Software Development Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Software Development</h2>
+                    <p>Software development involves designing, coding, testing, and maintaining applications.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">Frontend Developer</div>
+                    <div class="role-box">Backend Developer</div>
+                    <div class="role-box">Full Stack Developer</div>
+                    <div class="role-box">Mobile App Developer</div>
+                    <div class="role-box">DevOps Engineer</div>
+                </div>
+                <div class="search-jobs">
+                    <input type="text" id="jobSearch" placeholder="Search for jobs..." onkeyup="searchJobs()">
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Science & AI Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Data Science & AI</h2>
+                    <p>Data Science involves analyzing data to extract insights, while AI focuses on creating intelligent systems.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">Data Scientist</div>
+                    <div class="role-box">Machine Learning Engineer</div>
+                    <div class="role-box">AI Researcher</div>
+                    <div class="role-box">Data Analyst</div>
+                    <div class="role-box">Business Intelligence Analyst</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cloud Computing & DevOps Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Cloud Computing & DevOps</h2>
+                    <p>Cloud Computing provides scalable infrastructure, while DevOps focuses on automation and collaboration.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">Cloud Architect</div>
+                    <div class="role-box">DevOps Engineer</div>
+                    <div class="role-box">Site Reliability Engineer (SRE)</div>
+                    <div class="role-box">Cloud Security Specialist</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cybersecurity & Ethical Hacking Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Cybersecurity & Ethical Hacking</h2>
+                    <p>Cybersecurity protects systems from threats, while Ethical Hacking identifies vulnerabilities.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">Cybersecurity Analyst</div>
+                    <div class="role-box">Ethical Hacker</div>
+                    <div class="role-box">Security Architect</div>
+                    <div class="role-box">Incident Responder</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Database Management Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Database Management</h2>
+                    <p>Database Management involves designing, maintaining, and optimizing databases.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">Database Administrator (DBA)</div>
+                    <div class="role-box">Data Engineer</div>
+                    <div class="role-box">SQL Developer</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software Testing & QA Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Software Testing & QA</h2>
+                    <p>Software Testing ensures quality by identifying bugs, while QA focuses on process improvement.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">QA Engineer</div>
+                    <div class="role-box">Test Automation Engineer</div>
+                    <div class="role-box">Manual Tester</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI/UX Design Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>UI/UX Design</h2>
+                    <p>UI/UX Design focuses on creating user-friendly and visually appealing interfaces.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">UI Designer</div>
+                    <div class="role-box">UX Designer</div>
+                    <div class="role-box">Interaction Designer</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IT Support & Networking Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>IT Support & Networking</h2>
+                    <p>IT Support resolves technical issues, while Networking manages communication systems.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">IT Support Specialist</div>
+                    <div class="role-box">Network Engineer</div>
+                    <div class="role-box">Systems Administrator</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blockchain Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Blockchain</h2>
+                    <p>Blockchain focuses on decentralized ledger technology and smart contracts.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">Blockchain Developer</div>
+                    <div class="role-box">Smart Contract Developer</div>
+                    <div class="role-box">Cryptocurrency Analyst</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web3 Section -->
+        <section class="field-container">
+            <div class="software-development-section">
+                <div class="field-description">
+                    <h2>Web3</h2>
+                    <p>Web3 represents the next generation of the internet, focusing on decentralization and blockchain.</p>
+                </div>
+                <div class="role-boxes">
+                    <div class="role-box">Web3 Developer</div>
+                    <div class="role-box">Decentralized App (dApp) Developer</div>
+                    <div class="role-box">Blockchain Architect</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

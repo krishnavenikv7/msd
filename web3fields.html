@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Fields</title>
+    <style>
+        :root {
+            --primary-bg: #fff8f0; /* Warm cream background */
+            --header-bg: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Peach-pink gradient */
+            --card-bg: #ffffff;
+            --accent-orange: #ff6f61; /* Vibrant orange */
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--header-bg);
+            color: var(--text-dark);
+            padding: 1.5rem;
+            text-align: left;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+            pointer-events: none;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+        header p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin: 0.5rem 0 0;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px var(--shadow);
+            width: calc(23% - 2rem);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Unique Colors for Job Cards */
+        .job-card:nth-child(1) { background-color: #fff0f0; } /* Soft pink */
+        .job-card:nth-child(2) { background-color: #fff8f0; } /* Cream */
+        .job-card:nth-child(3) { background-color: #f0fff0; } /* Soft green */
+        .job-card:nth-child(4) { background-color: #f8f0ff; } /* Lavender */
+        .job-card:nth-child(5) { background-color: #f0f8ff; } /* Light blue */
+        .job-card:nth-child(6) { background-color: #fff0f8; } /* Pastel purple */
+        .job-card:nth-child(7) { background-color: #f0fff8; } /* Mint */
+        .job-card:nth-child(8) { background-color: #fff8f8; } /* Pale peach */
+        .job-card:nth-child(9) { background-color: #f8fff0; } /* Lemon */
+        .job-card:nth-child(10) { background-color: #fff0ff; } /* Lilac */
+        .job-card:nth-child(11) { background-color: #f8f8ff; } /* Ice blue */
+        .job-card:nth-child(12) { background-color: #ffffff; } /* Pure white */
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: var(--accent-orange);
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .job-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+        .job-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .job-card li {
+            margin-bottom: 0.5rem;
+        }
+        .job-card button {
+            background-color: var(--accent-orange);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #ff4d4d; /* Darker orange on hover */
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem);
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem);
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web3 Field</h1>
+        <p>Web3 involves decentralized technologies like blockchain, smart contracts, and cryptocurrencies. These fields are revolutionizing industries by enabling trustless systems, decentralized finance (DeFi), and digital ownership through NFTs. Freshers earn ₹4–12 lakh, mid-level ₹12–25 lakh, and experienced professionals ₹25–60 lakh. Senior roles can exceed ₹1 crore annually.</p>
+    </header>
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Blockchain Developer</h2>
+                <p>Build decentralized applications (dApps) and smart contracts using platforms like Ethereum.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in blockchain platforms (Ethereum, Solana).</li>
+                    <li>Experience with programming languages (Solidity, Rust).</li>
+                    <li>Certifications like Certified Blockchain Developer are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Smart Contract Engineer</h2>
+                <p>Design, develop, and audit smart contracts for blockchain-based projects.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in IT or related field.</li>
+                    <li>Strong understanding of Solidity and smart contract security.</li>
+                    <li>Experience with auditing tools and vulnerability testing.</li>
+                    <li>Certifications like Certified Smart Contract Auditor are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Crypto Analyst</h2>
+                <p>Analyze cryptocurrency markets and trends to guide investment strategies.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Finance or Economics.</li>
+                    <li>Experience in financial analysis and market research.</li>
+                    <li>Strong knowledge of blockchain ecosystems and DeFi protocols.</li>
+                    <li>Certifications like Cryptocurrency Certification Program are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>NFT Developer</h2>
+                <p>Create and manage non-fungible tokens (NFTs) for digital assets and collectibles.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in IT or related field.</li>
+                    <li>Proficiency in NFT standards (ERC-721, ERC-1155).</li>
+                    <li>Experience with blockchain platforms like Ethereum and Polygon.</li>
+                    <li>Certifications like Certified NFT Developer are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>DeFi Specialist</h2>
+                <p>Work on decentralized finance protocols, including lending, borrowing, and staking platforms.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Finance or IT-related field.</li>
+                    <li>Experience with DeFi protocols (Uniswap, Aave, Compound).</li>
+                    <li>Strong understanding of yield farming and liquidity pools.</li>
+                    <li>Certifications like Certified DeFi Expert are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Blockchain Architect</h2>
+                <p>Design scalable and secure blockchain solutions for enterprises.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in IT or related field.</li>
+                    <li>Experience in designing distributed systems and consensus algorithms.</li>
+                    <li>Strong knowledge of cryptography and fault tolerance.</li>
+                    <li>Certifications like Certified Blockchain Architect are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>DAO Manager</h2>
+                <p>Oversee decentralized autonomous organizations (DAOs) and their governance processes.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Business or IT-related field.</li>
+                    <li>Experience in managing DAOs and community engagement.</li>
+                    <li>Strong understanding of governance models and voting mechanisms.</li>
+                    <li>Certifications like Certified DAO Manager are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Web3 Security Auditor</h2>
+                <p>Identify vulnerabilities in smart contracts and decentralized applications.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Cybersecurity or related field.</li>
+                    <li>Experience with security audits and penetration testing.</li>
+                    <li>Strong knowledge of blockchain vulnerabilities (reentrancy, integer overflow).</li>
+                    <li>Certifications like Certified Blockchain Security Professional are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Crypto Product Manager</h2>
+                <p>Lead product development for blockchain-based applications and platforms.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Business or IT-related field.</li>
+                    <li>Experience in product management and agile methodologies.</li>
+                    <li>Strong understanding of blockchain use cases and user needs.</li>
+                    <li>Certifications like Certified Product Manager are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Tokenomics Designer</h2>
+                <p>Develop token economies and incentive models for blockchain projects.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Economics or Finance.</li>
+                    <li>Experience in designing token distribution models and incentives.</li>
+                    <li>Strong understanding of game theory and behavioral economics.</li>
+                    <li>Certifications like Certified Tokenomics Designer are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Layer 2 Developer</h2>
+                <p>Work on scaling solutions like rollups and sidechains for blockchains.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Experience with Layer 2 solutions (Optimism, Arbitrum, zk-Rollups).</li>
+                    <li>Strong knowledge of scalability challenges and solutions.</li>
+                    <li>Certifications like Certified Layer 2 Developer are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Web3 UX/UI Designer</h2>
+                <p>Create user-friendly interfaces for decentralized applications and wallets.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design or related field.</li>
+                    <li>Experience in designing intuitive interfaces for Web3 platforms.</li>
+                    <li>Strong understanding of user experience principles.</li>
+                    <li>Certifications like Certified UX Designer are preferred.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

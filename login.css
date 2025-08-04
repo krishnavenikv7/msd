@@ -1,0 +1,108 @@
+/* style.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('C:\xampp\htdocs\field project\images\bgimg.jpg.jpg'); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95); /* Slightly more opaque for better readability */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Slightly wider for better spacing */
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+  font-weight: 600; /* Bold heading */
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Glow effect on focus */
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Reset on click */
+}
+
+p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(255, 77, 77, 0.1);
+  border-radius: 8px;
+  border: 1px solid #ff4d4d;
+}

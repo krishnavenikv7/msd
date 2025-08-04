@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Design Fields</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+        header {
+            background: linear-gradient(135deg, #E3F2FD, #BBDEFB); /* Soft blue gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Similar Shades for Job Cards (Soft Blue and Gray Tones) */
+        .job-card:nth-child(1) { background-color: #E3F2FD; } /* Light blue */
+        .job-card:nth-child(2) { background-color: #F5F5F5; } /* White smoke */
+        .job-card:nth-child(3) { background-color: #E8F7FA; } /* Light teal */
+        .job-card:nth-child(4) { background-color: #F3F8F9; } /* Subtle teal */
+        .job-card:nth-child(5) { background-color: #F0F8FF; } /* Alice blue */
+        .job-card:nth-child(6) { background-color: #F5FCFF; } /* Very light blue */
+        .job-card:nth-child(7) { background-color: #F0FAFF; } /* Soft sky blue */
+        .job-card:nth-child(8) { background-color: #F8FFFF; } /* Ice blue */
+        .job-card:nth-child(9) { background-color: #F0FDFF; } /* Pale cyan */
+        .job-card:nth-child(10) { background-color: #F5FFFF; } /* Subtle cyan */
+        .job-card:nth-child(11) { background-color: #F8FFFF; } /* Very pale blue */
+        .job-card:nth-child(12) { background-color: #FFFFFF; } /* Pure white */
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+        .job-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+            color: #444; /* Slightly darker gray for subheadings */
+        }
+        .job-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .job-card li {
+            margin-bottom: 0.5rem;
+        }
+        .job-card button {
+            background-color: #BBDEFB; /* Soft blue for buttons */
+            color: black; /* Black text color */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #90CAF9; /* Medium blue on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UI/UX Design Field</h1>
+        <p>UI/UX Design involves creating visually appealing and user-friendly interfaces for websites, applications, and digital products. These fields focus on enhancing user experience, accessibility, and usability. Freshers earn ₹3–8 lakh, mid-level ₹8–15 lakh, and experienced professionals ₹15–30 lakh. Senior roles can exceed ₹50 lakh annually.</p>
+    </header>
+
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>UI Designer</h2>
+                <p>Design visually appealing interfaces for websites and applications.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design or related field.</li>
+                    <li>Proficiency in design tools (Adobe XD, Figma, Sketch).</li>
+                    <li>Strong understanding of typography, color theory, and layout.</li>
+                    <li>Portfolio showcasing UI design projects.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>UX Designer</h2>
+                <p>Create intuitive and user-centered designs to enhance usability.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design, Psychology, or related field.</li>
+                    <li>Experience with wireframing and prototyping tools (Figma, InVision).</li>
+                    <li>Strong problem-solving and research skills.</li>
+                    <li>Understanding of user-centered design principles.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Interaction Designer</h2>
+                <p>Focus on designing interactive elements for seamless user experiences.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design or related field.</li>
+                    <li>Experience with interaction design tools (Proto.io, Axure).</li>
+                    <li>Knowledge of micro-interactions and animations.</li>
+                    <li>Strong portfolio highlighting interactive designs.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Visual Designer</h2>
+                <p>Develop visual concepts and assets for digital products.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Graphic Design or related field.</li>
+                    <li>Proficiency in graphic design tools (Photoshop, Illustrator).</li>
+                    <li>Strong sense of aesthetics and creativity.</li>
+                    <li>Experience with branding and visual storytelling.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Product Designer</h2>
+                <p>Combine UI/UX principles to design end-to-end product experiences.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design or related field.</li>
+                    <li>Experience in full-cycle product design (research to implementation).</li>
+                    <li>Strong collaboration skills with cross-functional teams.</li>
+                    <li>Portfolio showcasing product design work.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>UX Researcher</h2>
+                <p>Conduct user research to inform design decisions and improve usability.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Psychology, Human-Computer Interaction, or related field.</li>
+                    <li>Experience with qualitative and quantitative research methods.</li>
+                    <li>Proficiency in usability testing tools (Maze, UserTesting).</li>
+                    <li>Strong analytical and communication skills.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Information Architect</h2>
+                <p>Organize content and structure information for clarity and accessibility.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Information Science or related field.</li>
+                    <li>Experience in organizing complex information systems.</li>
+                    <li>Proficiency in sitemap and taxonomy creation tools.</li>
+                    <li>Strong understanding of user navigation patterns.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>UI/UX Developer</h2>
+                <p>Bridge design and development by implementing UI/UX designs into code.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in HTML, CSS, and JavaScript.</li>
+                    <li>Experience with front-end frameworks (React, Angular).</li>
+                    <li>Strong understanding of responsive design principles.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Graphic Designer</h2>
+                <p>Create visual elements like logos, icons, and illustrations for digital platforms.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Graphic Design or related field.</li>
+                    <li>Proficiency in design tools (Illustrator, CorelDRAW).</li>
+                    <li>Strong portfolio showcasing creative work.</li>
+                    <li>Experience with branding and marketing materials.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Motion Designer</h2>
+                <p>Add animations and transitions to enhance user interactions.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Animation or related field.</li>
+                    <li>Experience with motion design tools (After Effects, Principle).</li>
+                    <li>Strong understanding of timing and easing in animations.</li>
+                    <li>Portfolio showcasing motion design projects.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Usability Tester</h2>
+                <p>Evaluate designs through user testing to ensure functionality and accessibility.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design, Psychology, or related field.</li>
+                    <li>Experience with usability testing methodologies.</li>
+                    <li>Proficiency in testing tools (Hotjar, Crazy Egg).</li>
+                    <li>Strong attention to detail and analytical skills.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Design Systems Specialist</h2>
+                <p>Create and maintain reusable design systems for consistency across products.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design or related field.</li>
+                    <li>Experience in building and maintaining design systems.</li>
+                    <li>Proficiency in design tools (Figma, Storybook).</li>
+                    <li>Strong understanding of modular design principles.</li>
+                </ul>
+                <button>Go to</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

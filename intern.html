@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #f5f5f5;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+        h1 { margin-bottom: 20px; }
+        .filter-buttons {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-top: 20px;
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+        .filter-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        .filter-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .internships {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .internship-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        .internship-card:hover {
+            transform: translateY(-5px);
+        }
+        .internship-card h3 {
+            margin-bottom: 10px;
+        }
+        .internship-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        .apply-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #28a745;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .apply-btn:hover {
+            background: #218838;
+        }
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px;
+            background: #ffc107;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .dark-mode {
+            background: #1a1a1a;
+            color: white;
+        }
+        .dark-mode .internship-card {
+            background: #333;
+            color: white;
+        }
+        .back-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <a href="sectors.html" class="back-button">Back</a>
+        <h1>Available Internships</h1>
+        <div class="filter-buttons">
+            <button onclick="filterInternships('all')">All</button>
+            <button onclick="filterInternships('government')">Government</button>
+            <button onclick="filterInternships('private')">Private</button>
+        </div>
+        <div class="internships" id="internship-list">
+            <!-- Government Internships -->
+            <div class="internship-card" data-category="government">
+                <h3>ISRO Research Internship</h3>
+                <p>Work on satellite technologies. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>DRDO Cybersecurity Internship</h3>
+                <p>Work on government cybersecurity initiatives. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Health Mission Internship</h3>
+                <p>Assist in public health initiatives. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Ministry of Education Internship</h3>
+                <p>Support educational policy research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Indian Railways Internship</h3>
+                <p>Work on railway infrastructure projects. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Defense Internship</h3>
+                <p>Engage in defense research projects. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Ministry of Finance Internship</h3>
+                <p>Assist in financial policy analysis. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Environmental Protection Agency Internship</h3>
+                <p>Work on environmental conservation projects. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Aeronautics and Space Administration Internship</h3>
+                <p>Participate in space exploration projects. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Public Works Department Internship</h3>
+                <p>Assist in civil engineering projects. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Security Agency Internship</h3>
+                <p>Engage in cybersecurity initiatives. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Agriculture Internship</h3>
+                <p>Support agricultural research projects. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Ministry of External Affairs Internship</h3>
+                <p>Assist in diplomatic research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Institute of Health Internship</h3>
+                <p>Work on health research projects. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Energy Internship</h3>
+                <p>Engage in energy policy research. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Oceanic and Atmospheric Administration Internship</h3>
+                <p>Participate in climate research projects. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Transportation Internship</h3>
+                <p>Assist in transportation infrastructure projects. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Park Service Internship</h3>
+                <p>Work on conservation projects in national parks. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Federal Bureau of Investigation Internship</h3>
+                <p>Engage in criminal justice research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Homeland Security Internship</h3>
+                <p>Assist in national security initiatives. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Archives Internship</h3>
+                <p>Work on historical document preservation. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Labor Internship</h3>
+                <p>Assist in labor market research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Science Foundation Internship</h3>
+                <p>Engage in scientific research projects. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Veterans Affairs Internship</h3>
+                <p>Support veteran services initiatives. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Endowment for the Arts Internship</h3>
+                <p>Assist in arts funding initiatives. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of State Internship</h3>
+                <p>Engage in international relations research. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Labor Relations Board Internship</h3>
+                <p>Assist in labor relations research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>U.S. Geological Survey Internship</h3>
+                <p>Work on geological research projects. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Department of Housing and Urban Development Internship</h3>
+                <p>Assist in urban development projects. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>National Transportation Safety Board Internship</h3>
+                <p>Engage in transportation safety research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="government">
+                <h3>Indian Meteorological Department Internship</h3>
+                <p>Work on weather forecasting and climate research. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>RBI Financial Research Internship</h3>
+                <p>Assist in monetary policy and financial market research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Indian Space Research Organization (ISRO) AI Internship</h3>
+                <p>Work on AI and machine learning for space research. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>National Informatics Centre (NIC) Internship</h3>
+                <p>Assist in government digital infrastructure projects. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Bureau of Indian Standards (BIS) Internship</h3>
+                <p>Support standardization and quality control initiatives. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Election Commission of India Internship</h3>
+                <p>Assist in election process research and voter outreach. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Atomic Energy Regulatory Board (AERB) Internship</h3>
+                <p>Work on nuclear safety and regulation research. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Indian Council of Agricultural Research (ICAR) Internship</h3>
+                <p>Support agricultural development and food security research. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>National Investigation Agency (NIA) Internship</h3>
+                <p>Engage in counter-terrorism research and analysis. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Indian Institute of Remote Sensing (IIRS) Internship</h3>
+                <p>Work on geospatial and remote sensing technology. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>National Dairy Development Board (NDDB) Internship</h3>
+                <p>Assist in dairy industry research and development. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Indian Ports Association Internship</h3>
+                <p>Work on maritime trade and logistics research. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>National Film Development Corporation Internship</h3>
+                <p>Assist in film and media production projects. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Defense Research and Development Organization (DRDO) AI Internship</h3>
+                <p>Work on AI-based defense applications. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Ministry of Tourism Internship</h3>
+                <p>Support research on tourism development and policy. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Central Water Commission Internship</h3>
+                <p>Work on water resource management research. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Indian Renewable Energy Development Agency Internship</h3>
+                <p>Engage in sustainable energy projects. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Indian Statistical Institute Internship</h3>
+                <p>Assist in statistical modeling and data analysis. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Central Bureau of Investigation (CBI) Internship</h3>
+                <p>Engage in criminal investigation research. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <div class="internship-card" data-category="government">
+                <h3>Ministry of Electronics and IT Internship</h3>
+                <p>Support digital transformation and cybersecurity projects. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            
+            <!-- Private Internships -->
+            <div class="internship-card" data-category="private">
+                <h3>Google Software Internship</h3>
+                <p>Work on AI projects with Google. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Microsoft Cloud Internship</h3>
+                <p>Work on Azure cloud solutions. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Amazon Web Services Internship</h3>
+                <p>Develop cloud-based solutions. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Facebook Marketing Internship</h3>
+                <p>Assist in social media marketing strategies. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Apple Software Development Internship</h3>
+                <p>Work on iOS applications. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>IBM Data Science Internship</h3>
+                <p>Analyze data for business insights. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Salesforce Business Analyst Internship</h3>
+                <p>Support CRM solutions for clients. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Netflix Content Internship</h3>
+                <p>Assist in content acquisition and analysis. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Adobe Creative Internship</h3>
+                <p>Work on creative software projects. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Spotify Data Analytics Internship</h3>
+                <p>Analyze user data for music trends. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Twitter Software Engineering Internship</h3>
+                <p>Develop features for the Twitter platform. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>LinkedIn Marketing Internship</h3>
+                <p>Assist in marketing campaigns. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Uber Operations Internship</h3>
+                <p>Support operational strategies. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Snapchat Product Management Internship</h3>
+                <p>Assist in product development. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Airbnb Community Internship</h3>
+                <p>Engage with hosts and guests. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Salesforce Software Engineering Internship</h3>
+                <p>Develop CRM solutions. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Shopify E-commerce Internship</h3>
+                <p>Assist in e-commerce platform development. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Intel Hardware Engineering Internship</h3>
+                <p>Work on hardware development projects. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Oracle Database Internship</h3>
+                <p>Assist in database management projects. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>PayPal Financial Analyst Internship</h3>
+                <p>Analyze financial data for insights. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Dropbox Software Development Internship</h3>
+                <p>Work on cloud storage solutions. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Zoom Video Communications Internship</h3>
+                <p>Assist in video conferencing solutions. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Slack Product Design Internship</h3>
+                <p>Work on user interface design. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Square Financial Services Internship</h3>
+                <p>Assist in financial services projects. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Yelp Marketing Internship</h3>
+                <p>Support marketing initiatives. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Reddit Community Management Internship</h3>
+                <p>Engage with Reddit communities. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Spotify Marketing Internship</h3>
+                <p>Assist in music marketing campaigns. Duration: 3 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>LinkedIn Data Science Internship</h3>
+                <p>Analyze user data for insights. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Twitter Data Analyst Internship</h3>
+                <p>Support data analysis for trends. Duration: 5 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Uber Software Engineering Internship</h3>
+                <p>Develop features for the Uber app. Duration: 6 months.</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="internship-card" data-category="private">
+                <h3>Airbnb Data Science Internship</h3>
+                <p>Analyze data for user insights. Duration: 4 months.</p>
+                <a href="#" class="apply-btn">
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Snapchat Marketing Internship</h3>
+                    <p>Assist in marketing campaigns for Snapchat. Duration: 3 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Shopify Data Analyst Internship</h3>
+                    <p>Analyze e-commerce data for insights. Duration: 5 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Intel Software Engineering Internship</h3>
+                    <p>Work on software for hardware products. Duration: 6 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>PayPal Software Development Internship</h3>
+                    <p>Assist in payment solutions development. Duration: 4 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Dropbox Marketing Internship</h3>
+                    <p>Support marketing strategies for Dropbox. Duration: 3 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Zoom Product Management Internship</h3>
+                    <p>Assist in product management for Zoom. Duration: 5 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Slack Data Analyst Internship</h3>
+                    <p>Analyze user engagement data. Duration: 4 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Yelp Software Engineering Internship</h3>
+                    <p>Develop features for the Yelp platform. Duration: 6 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Reddit Marketing Internship</h3>
+                    <p>Assist in marketing campaigns for Reddit. Duration: 3 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Spotify Software Development Internship</h3>
+                    <p>Work on music streaming features. Duration: 5 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>LinkedIn Community Management Internship</h3>
+                    <p>Engage with LinkedIn users and communities. Duration: 4 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Twitter Marketing Internship</h3>
+                    <p>Assist in marketing strategies for Twitter. Duration: 3 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Uber Data Analyst Internship</h3>
+                    <p>Analyze data for operational insights. Duration: 5 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Airbnb Software Development Internship</h3>
+                    <p>Work on features for the Airbnb platform. Duration: 6 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Snapchat Data Analyst Internship</h3>
+                    <p>Analyze user engagement data for Snapchat. Duration: 4 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Shopify Marketing Internship</h3>
+                    <p>Assist in marketing campaigns for Shopify. Duration: 3 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Intel Marketing Internship</h3>
+                    <p>Support marketing initiatives for Intel products. Duration: 5 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>PayPal Data Analyst Internship</h3>
+                    <p>Analyze financial data for insights. Duration: 4 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Dropbox Product Management Internship</h3>
+                    <p>Assist in product management for Dropbox. Duration: 6 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+                <div class="internship-card" data-category="private">
+                    <h3>Zoom Community Management Internship</h3>
+                    <p>Engage with Zoom users and communities. Duration: 3 months.</p>
+                    <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+</body>
+<body>
+        <div class="container">
+            <h1>Internship Application Form</h1>
+            <form id="application-form">
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name">Middle Name:</label>
+                    <input type="text" id="middle-name">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Internship Type:</label>
+                    <input type="radio" name="internship-type" value="part-time" required> Part-time
+                    <input type="radio" name="internship-type" value="full-time"> Full-time
+                    <input type="radio" name="internship-type" value="virtual"> Virtual
+                </div>
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" value="male" required> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                </div>
+                <div class="form-group">
+                    <label for="institution">Name of the Institution:</label>
+                    <input type="text" id="institution" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <select id="type" required>
+                        <option value="student">Student</option>
+                        <option value="fresher">Fresher</option>
+                        <option value="professional">Professional</option>
+                        <option value="recruiter">Recruiter</option>
+                        <option value="organizer">Organizer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course" required>
+                        <option value="btech">B.Tech</option>
+                        <option value="mtech">M.Tech</option>
+                        <option value="it">IT</option>
+                        <option value="mechanical">Mechanical</option>
+                        <option value="civil">Civil</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="branch">Branch:</label>
+                    <select id="branch" required>
+                        <option value="cse">CSE</option>
+                        <option value="ece">ECE</option>
+                        <option value="me">ME</option>
+                        <option value="ce">CE</option>
+                        <option value="ee">EE</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="graduation-year">Graduation Year:</label>
+                    <select id="graduation-year" required>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="course-duration">Course Duration:</label>
+                    <select id="course-duration" required>
+                        <option value="1st">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" required>
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="canada">Canada</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills You Have:</label>
+                    <textarea id="skills" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <div class="message" id="message"></div>
+            <div class="error" id="error-message"></div>
+        </div>
+        <script>
+            const form = document.getElementById('application-form');
+            const messageDiv = document.getElementById('message');
+            const errorMessageDiv = document.getElementById('error-message');
+    
+            // Check if the user has already submitted the form
+            const userEmail = localStorage.getItem('userEmail');
+    
+            if (userEmail) {
+                errorMessageDiv.textContent = "You have already submitted your application.";
+                form.style.display = 'none'; // Hide the form if already submitted
+            }
+    
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+    
+                const email = document.getElementById('email').value;
+    
+                // Check if the email is already submitted
+                if (localStorage.getItem('userEmail') === email) {
+                    errorMessageDiv.textContent = "You cannot enter your details again.";
+                    return;
+                }
+    
+                // Store the email in local storage to prevent duplicate submissions
+                localStorage.setItem('userEmail', email);
+    
+                // Display success message
+                messageDiv.textContent = "Your application has been successfully submitted!";
+                errorMessageDiv.textContent = ""; // Clear any error messages
+    
+                // Optionally, reset the form
+                form.reset();
+            });
+        </script> 
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        <script>
+            function filterInternships(category) {
+                let internships = document.querySelectorAll('.internship-card');
+                internships.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            function toggleDarkMode() {
+                document.body.classList.toggle('dark-mode');
+                localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                if (localStorage.getItem('dark-mode') === 'true') {
+                    document.body.classList.add('dark-mode');
+                }
+            });
+        </script>
+    </body>
+    </html>

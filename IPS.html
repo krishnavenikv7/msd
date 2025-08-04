@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Police Service (IPS)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      text-align: left;
+    }
+    header {
+      background: linear-gradient(135deg, #FDEDEC, #FADBD8);
+      color: #333;
+      padding: 1.5rem;
+      text-align: left;
+      border-radius: 15px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+      color: #555;
+    }
+    .available-fields {
+      padding: 2rem;
+    }
+    .available-fields h2 {
+      text-align: left;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+    .job-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: calc(23% - 2rem);
+      padding: 1.5rem;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .job-card:nth-child(1) { background-color: #FDEDEC; }
+    .job-card:nth-child(2) { background-color: #F5F5F5; }
+    .job-card:nth-child(3) { background-color: #FEF9E7; }
+    .job-card:nth-child(4) { background-color: #F8F8F8; }
+    .job-card:nth-child(5) { background-color: #FFF3E0; }
+    .job-card:nth-child(6) { background-color: #FFFFFF; }
+    .job-card:nth-child(7) { background-color: #FBE9E7; }
+    .job-card:nth-child(8) { background-color: #F5F5FC; }
+    .job-card:nth-child(9) { background-color: #FDFEFE; }
+    .job-card:nth-child(10) { background-color: #E8F8F5; }
+    .job-card:nth-child(11) { background-color: #F4ECF7; }
+    .job-card:nth-child(12) { background-color: #FFFFFF; }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .job-card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #444;
+    }
+    .job-card p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .job-card a {
+      background-color: #F1948A;
+      color: black;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .job-card a:hover {
+      background-color: #EC7063;
+    }
+    @media (max-width: 768px) {
+      .job-card {
+        width: calc(45% - 2rem);
+      }
+    }
+    @media (max-width: 480px) {
+      .job-card {
+        width: calc(100% - 2rem);
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      header p {
+        font-size: 0.9rem;
+      }
+      .available-fields h2 {
+        font-size: 1.5rem;
+      }
+    }
+    .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db; /* Blue background */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .go-to-button:hover {
+            background-color: #518db5; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Indian Police Service (IPS)</h1>
+    <p>The Indian Police Service (IPS) is one of the three All India Services, responsible for maintaining public order, preventing and investigating crimes, and ensuring internal security. IPS officers serve in various law enforcement and intelligence agencies across India.</p>
+  </header>
+
+  <section class="available-fields">
+    <h2>Available Roles</h2>
+    <div class="container">
+      <div class="job-card">
+        <h2>Superintendent of Police (SP)</h2>
+        <p>Head district police operations, ensuring law and order and managing the police force.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Assistant Superintendent of Police (ASP)</h2>
+        <p>Initial field training and leadership in a subdivision under senior officers.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Deputy Inspector General (DIG)</h2>
+        <p>Oversees multiple districts and coordinates major operations and investigations.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Inspector General of Police (IGP)</h2>
+        <p>Heads a zone or range, manages district SPs, and directs strategic planning.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Director General of Police (DGP)</h2>
+        <p>Top police officer in a state, responsible for the entire police force.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Commissioner of Police</h2>
+        <p>Heads police in metropolitan cities with magisterial powers.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Joint Commissioner of Police</h2>
+        <p>Manages special departments like crime, traffic, or administration in cities.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Intelligence Bureau Officer</h2>
+        <p>Handles intelligence gathering and counter-intelligence activities across India.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Central Bureau of Investigation (CBI) Officer</h2>
+        <p>Investigates high-profile crimes, corruption, and economic offenses.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Director General, NSG</h2>
+        <p>Leads the National Security Guard, managing anti-terror and special ops units.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Director, Narcotics Control Bureau (NCB)</h2>
+        <p>Heads operations against illegal drug trafficking across India.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+      <div class="job-card">
+        <h2>Cyber Crime Division Head</h2>
+        <p>Leads investigations and strategy for preventing cyber crimes and digital threats.</p>
+        <a href="application_form.html" class="go-to-button">Go to</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

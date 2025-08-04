@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse & Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0fff0; /* Light green-tinted background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+        header {
+            background: linear-gradient(135deg, #E8F5E9, #C8E6C9); /* Soft green gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Similar Shades for Job Cards (Soft Green and White Tones) */
+        .job-card:nth-child(1) { background-color: #E8F5E9; } /* Light green */
+        .job-card:nth-child(2) { background-color: #F5F5F5; } /* White smoke */
+        .job-card:nth-child(3) { background-color: #FFFFFF; } /* Pure white */
+        .job-card:nth-child(4) { background-color: #F0FFF0; } /* Honeydew */
+        .job-card:nth-child(5) { background-color: #F5FCF5; } /* Very light green */
+        .job-card:nth-child(6) { background-color: #FAFAFA; } /* Off-white */
+        .job-card:nth-child(7) { background-color: #F0FAF0; } /* Soft sage */
+        .job-card:nth-child(8) { background-color: #F8FFF8; } /* Ice green */
+        .job-card:nth-child(9) { background-color: #F0FDF0; } /* Pale mint */
+        .job-card:nth-child(10) { background-color: #F5FFFF; } /* Subtle mint */
+        .job-card:nth-child(11) { background-color: #F8FFFF; } /* Very pale green */
+        .job-card:nth-child(12) { background-color: #FFFFFF; } /* Pure white */
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+        .job-card button {
+            background-color: #C8E6C9; /* Soft green for buttons */
+            color: black; /* Black text color */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #A5D6A7; /* Medium green on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Warehouse & Inventory Management</h1>
+        <p>Warehouse and Inventory Management involve overseeing the storage, tracking, and movement of goods in a warehouse or distribution center. These fields are critical for optimizing supply chain efficiency, reducing costs, and ensuring timely delivery of products. Freshers earn ₹3–8 lakh, mid-level professionals ₹8–15 lakh, and experienced individuals ₹15–30 lakh. Senior roles can exceed ₹50 lakh annually.</p>
+    </header>
+
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Warehouse Manager</h2>
+                <p>Oversee daily operations in the warehouse, including inventory management and staff supervision.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Inventory Control Specialist</h2>
+                <p>Monitor stock levels, track inventory, and ensure accurate record-keeping.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Forklift Operator</h2>
+                <p>Operate forklifts and other material-handling equipment to move goods within the warehouse.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Supply Chain Analyst</h2>
+                <p>Analyze data to improve supply chain processes and optimize inventory levels.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Order Picker/Packer</h2>
+                <p>Pick and pack customer orders efficiently while maintaining accuracy.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Logistics Coordinator</h2>
+                <p>Coordinate shipments, deliveries, and transportation schedules to ensure smooth operations.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Receiving Clerk</h2>
+                <p>Inspect and process incoming shipments, ensuring quality and quantity match purchase orders.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Stock Controller</h2>
+                <p>Manage stock levels, conduct audits, and prevent overstocking or stockouts.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Shipping Supervisor</h2>
+                <p>Oversee the packing and dispatching of goods to ensure timely deliveries.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Procurement Specialist</h2>
+                <p>Source and purchase materials, negotiate contracts, and manage supplier relationships.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Material Handler</h2>
+                <p>Load, unload, and organize materials in the warehouse for efficient access and storage.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Demand Planner</h2>
+                <p>Forecast demand for products and plan inventory levels to meet future needs.</p>
+                <button>Go to</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

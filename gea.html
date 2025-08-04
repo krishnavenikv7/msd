@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Educational Administrators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+        header {
+            background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+            color: #333;
+            padding: 1.5rem;
+            text-align: left;
+            border-radius: 15px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555;
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Color for each card */
+        .job-card:nth-child(1) { background-color: #E3F2FD; }
+        .job-card:nth-child(2) { background-color: #F5F5F5; }
+        .job-card:nth-child(3) { background-color: #E1F5FE; }
+        .job-card:nth-child(4) { background-color: #F8F8F8; }
+        .job-card:nth-child(5) { background-color: #E3F2FD; }
+        .job-card:nth-child(6) { background-color: #FFFFFF; }
+        .job-card:nth-child(7) { background-color: #E1F5FE; }
+        .job-card:nth-child(8) { background-color: #F5F5FC; }
+        .job-card:nth-child(9) { background-color: #FFFAFA; }
+        .job-card:nth-child(10) { background-color: #E3F2FD; }
+        .job-card:nth-child(11) { background-color: #F8F8FE; }
+        .job-card:nth-child(12) { background-color: #FFFFFF; }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444;
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .job-card button {
+            background-color: #BBDEFB;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #90CAF9;
+        }
+
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem);
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem);
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+        .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .go-to-button:hover {
+            background-color: #518db5;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Government Educational Administrators</h1>
+        <p>Explore various administrative roles in government-run educational institutions.</p>
+    </header>
+
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Role 1 -->
+            <div class="job-card">
+                <h2>Director of Education</h2>
+                <p>Lead and manage educational programs, policies, and initiatives at the national or state level.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="job-card">
+                <h2>Principal of Public Schools</h2>
+                <p>Oversee the daily operations of public schools, ensuring the implementation of educational policies.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="job-card">
+                <h2>Deputy Director of Education</h2>
+                <p>Assist in the management of education departments and support in policy development and execution.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 4 -->
+            <div class="job-card">
+                <h2>Chief Administrator of Higher Education</h2>
+                <p>Oversee the administration of public universities and colleges, ensuring they comply with governmental standards.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 5 -->
+            <div class="job-card">
+                <h2>Education Policy Advisor</h2>
+                <p>Provide expert advice on educational policy and help shape national educational reforms.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 6 -->
+            <div class="job-card">
+                <h2>Public School Inspector</h2>
+                <p>Inspect and evaluate public schools, ensuring compliance with state educational standards.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 7 -->
+            <div class="job-card">
+                <h2>Director of Vocational Education</h2>
+                <p>Manage vocational education programs and ensure they meet the needs of the workforce and local industries.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 8 -->
+            <div class="job-card">
+                <h2>Academic Affairs Officer</h2>
+                <p>Manage the academic affairs of government-run educational institutions and ensure educational excellence.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 9 -->
+            <div class="job-card">
+                <h2>State Educational Coordinator</h2>
+                <p>Coordinate educational initiatives, projects, and policies across schools within a state or district.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 10 -->
+            <div class="job-card">
+                <h2>Head of Curriculum Development</h2>
+                <p>Lead curriculum development efforts, ensuring that educational programs align with government standards.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 11 -->
+            <div class="job-card">
+                <h2>Education Program Evaluator</h2>
+                <p>Assess and evaluate the effectiveness of educational programs and their alignment with government goals.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 12 -->
+            <div class="job-card">
+                <h2>Chief of Education Statistics</h2>
+                <p>Manage the collection, analysis, and dissemination of education-related data and statistics for public policy.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

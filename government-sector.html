@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Sectors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(''); /* Replace with your preferred background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Change text color to white for better contrast */
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: #241b1b;
+        }
+        .sector-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+        .card {
+            background: rgba(54, 54, 54, 0.6); /* Semi-transparent background for readability */
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .card a {
+            text-decoration: none;
+            color: #ffd900; /* Yellow text color for contrast */
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: block;
+            padding: 15px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        .card a:hover {
+            background: rgba(255, 217, 0, 0.2); /* Light yellow hover effect */
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .back-button:hover {
+            background: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+            .sector-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Government Sectors</h2>
+        <div class="sector-container">
+            <div class="card">
+                <a href="civilservices.html">Civil Services</a>
+            </div>
+            <div class="card">
+                <a href="govt_banking&finance.html">Banking & Finance</a>
+            </div>
+            <div class="card">
+                <a href="defense&security.html">Defense & Security</a>
+            </div>
+            <div class="card">
+                <a href="railways.html">Railways</a>
+            </div>
+            <div class="card">
+                <a href="healthcare.html">Healthcare</a>
+            </div>
+            <div class="card">
+                <a href="education.html">Education</a>
+            </div>
+            <div class="card">
+                <a href="psus.html">Public Sector Undertakings (PSUs)</a>
+            </div>
+            <div class="card">
+                <a href="s and c jobs.html">State & Central Government Jobs</a>
+            </div>
+        </div>
+        <a href="sectors.html" class="back-button">Back</a>
+    </div>
+</body>
+</html>

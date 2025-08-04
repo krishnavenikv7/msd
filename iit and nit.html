@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Institutes of Technology (IIT) & National Institutes of Technology (NIT) Jobs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: left;
+        }
+        header {
+            background: linear-gradient(135deg, #64B5F6, #BBDEFB);
+            color: #333;
+            padding: 1.5rem;
+            text-align: left;
+            border-radius: 15px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555;
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .job-card:nth-child(1) { background-color: #BBDEFB; }
+        .job-card:nth-child(2) { background-color: #E3F2FD; }
+        .job-card:nth-child(3) { background-color: #64B5F6; }
+        .job-card:nth-child(4) { background-color: #E3F2FD; }
+        .job-card:nth-child(5) { background-color: #BBDEFB; }
+        .job-card:nth-child(6) { background-color: #FFFFFF; }
+        .job-card:nth-child(7) { background-color: #64B5F6; }
+        .job-card:nth-child(8) { background-color: #E3F2FD; }
+        .job-card:nth-child(9) { background-color: #BBDEFB; }
+        .job-card:nth-child(10) { background-color: #64B5F6; }
+        .job-card:nth-child(11) { background-color: #E3F2FD; }
+        .job-card:nth-child(12) { background-color: #FFFFFF; }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444;
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .job-card button {
+            background-color: #64B5F6;
+            color: black;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #42A5F5;
+        }
+
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem);
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem);
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+        .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1976D2;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .go-to-button:hover {
+            background-color: #1565C0;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Indian Institutes of Technology (IIT) & National Institutes of Technology (NIT) Jobs</h1>
+        <p>Explore prestigious job opportunities in India's top technical institutes like IITs and NITs, offering careers in academia, research, and administration.</p>
+    </header>
+
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Role 1 -->
+            <div class="job-card">
+                <h2>Professor</h2>
+                <p>Conduct research and teach undergraduate and postgraduate students in one of the leading IITs or NITs across various engineering and technology disciplines.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="job-card">
+                <h2>Assistant Professor</h2>
+                <p>Teach and engage in research activities at IITs or NITs, with a focus on innovative approaches in technology and engineering education.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="job-card">
+                <h2>Research Scientist</h2>
+                <p>Collaborate in cutting-edge research projects in various fields of science and engineering, contributing to national and global technological advancements.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 4 -->
+            <div class="job-card">
+                <h2>Teaching Assistant</h2>
+                <p>Assist professors in teaching undergraduate and postgraduate courses, conducting lab sessions, and grading assignments.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 5 -->
+            <div class="job-card">
+                <h2>Lab Technician</h2>
+                <p>Manage and maintain laboratory equipment, ensuring that research and educational activities in the labs of IITs and NITs run smoothly.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 6 -->
+            <div class="job-card">
+                <h2>Department Head</h2>
+                <p>Lead a department in an IIT or NIT, overseeing faculty, research initiatives, and curriculum development to maintain excellence in education and research.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 7 -->
+            <div class="job-card">
+                <h2>Visiting Faculty</h2>
+                <p>Provide specialized knowledge in specific technical areas as a visiting faculty member, bringing industry experience and expertise to the classroom.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 8 -->
+            <div class="job-card">
+                <h2>Postdoctoral Research Fellow</h2>
+                <p>Engage in advanced research at IITs or NITs, contributing to international publications and collaborating with leading experts in the field.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 9 -->
+            <div class="job-card">
+                <h2>Administrative Officer</h2>
+                <p>Support the administrative operations of IITs and NITs, handling tasks like resource allocation, student services, and policy implementation.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 10 -->
+            <div class="job-card">
+                <h2>Student Counselor</h2>
+                <p>Provide guidance and support to students, helping them navigate academic, personal, and career challenges in the IIT or NIT environment.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 11 -->
+            <div class="job-card">
+                <h2>Project Coordinator</h2>
+                <p>Coordinate research projects, manage resources, timelines, and ensure smooth execution of various academic and research initiatives at IITs or NITs.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Role 12 -->
+            <div class="job-card">
+                <h2>Technical Support Specialist</h2>
+                <p>Provide technical assistance for IT systems, software, and hardware across IITs and NITs, ensuring the smooth functioning of educational technologies.</p>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

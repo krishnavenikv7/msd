@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railway Personnel Service - Government Jobs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Light blue background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+        header {
+            background: linear-gradient(135deg, #90C8F6, #B0E0E6); /* Slightly more vibrant gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Updated job card background colors to lighter shades of #e3f2fd */
+        .job-card:nth-child(1) { background-color: #f0f8ff; } /* Very light blue */
+        .job-card:nth-child(2) { background-color: #eff7fe; } /* Slightly lighter */
+        .job-card:nth-child(3) { background-color: #ecf5fd; } /* Soft blue */
+        .job-card:nth-child(4) { background-color: #eaf3fc; } /* Light pastel */
+        .job-card:nth-child(5) { background-color: #e7f1fb; } /* Subtle blue */
+        .job-card:nth-child(6) { background-color: #e4effa; } /* Pale blue */
+        .job-card:nth-child(7) { background-color: #e1ecf9; } /* Light tint */
+        .job-card:nth-child(8) { background-color: #defaf8; } /* Very pale */
+        .job-card:nth-child(9) { background-color: #dbf8f7; } /* Almost white */
+        .job-card:nth-child(10) { background-color: #d8f5f6; } /* Faint blue */
+        .job-card:nth-child(11) { background-color: #d5f3f5; } /* Ultra-light */
+        .job-card:nth-child(12) { background-color: #d2f0f4; } /* Barely visible */
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+        .job-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+            color: #444; /* Slightly darker gray for subheadings */
+        }
+        .job-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .job-card li {
+            margin-bottom: 0.5rem;
+        }
+        .job-card button {
+            background-color: #90C8F6; /* Slightly darker blue for buttons */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #78B5F2; /* Slightly darker on hover */
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+        /* Button Styling */
+        .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db; /* Blue background */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .go-to-button:hover {
+            background-color: #518db5; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Indian Railway Personnel Service (IRPS)</h1>
+        <p>The Indian Railway Personnel Service is a Group A central service under the Ministry of Railways. It offers diverse career opportunities in human resource management, administration, recruitment, training, and welfare of railway employees. Freshers can earn ₹8–15 lakh annually, while experienced professionals can earn ₹20–40 lakh or more.</p>
+    </header>
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>HR Manager</h2>
+                <p>Oversee recruitment, training, and employee welfare programs within the Indian Railways.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Human Resources or related field.</li>
+                    <li>Experience in HR management and labor relations.</li>
+                    <li>Strong leadership and communication skills.</li>
+                    <li>Knowledge of labor laws and railway policies.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Training Officer</h2>
+                <p>Design and implement training programs for railway employees to enhance their skills.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Education, Training, or related field.</li>
+                    <li>Experience in designing and delivering training modules.</li>
+                    <li>Strong organizational and presentation skills.</li>
+                    <li>Knowledge of adult learning principles.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Recruitment Specialist</h2>
+                <p>Manage end-to-end recruitment processes for various railway positions.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Human Resources or Business Administration.</li>
+                    <li>Experience in recruitment and talent acquisition.</li>
+                    <li>Strong analytical and decision-making skills.</li>
+                    <li>Knowledge of railway recruitment rules and procedures.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Welfare Officer</h2>
+                <p>Ensure the well-being of railway employees through welfare programs and initiatives.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Social Work, Psychology, or related field.</li>
+                    <li>Experience in employee welfare and engagement programs.</li>
+                    <li>Strong interpersonal and problem-solving skills.</li>
+                    <li>Knowledge of railway welfare policies.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Administrative Officer</h2>
+                <p>Handle administrative tasks, including HR, finance, and logistics management.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Business Administration or related field.</li>
+                    <li>Experience in administrative roles and office management.</li>
+                    <li>Strong organizational and multitasking skills.</li>
+                    <li>Knowledge of railway administrative procedures.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Payroll Specialist</h2>
+                <p>Manage payroll processing and ensure timely disbursement of salaries.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Finance, Accounting, or related field.</li>
+                    <li>Experience in payroll management and compliance.</li>
+                    <li>Strong attention to detail and numerical skills.</li>
+                    <li>Knowledge of railway payroll systems and regulations.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Employee Relations Manager</h2>
+                <p>Maintain positive relationships between employees and management.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Human Resources or Industrial Relations.</li>
+                    <li>Experience in employee relations and conflict resolution.</li>
+                    <li>Strong negotiation and communication skills.</li>
+                    <li>Knowledge of labor laws and dispute resolution mechanisms.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Health & Safety Officer</h2>
+                <p>Ensure compliance with health and safety regulations for railway employees.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Occupational Health or Safety Engineering.</li>
+                    <li>Certification in workplace safety (e.g., IOSH, NEBOSH).</li>
+                    <li>Experience in conducting safety audits and inspections.</li>
+                    <li>Knowledge of railway safety standards and protocols.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Policy Analyst</h2>
+                <p>Analyze and develop policies related to railway personnel management.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Public Policy, Law, or related field.</li>
+                    <li>Experience in policy formulation and analysis.</li>
+                    <li>Strong research and writing skills.</li>
+                    <li>Knowledge of railway policies and governance frameworks.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Compliance Officer</h2>
+                <p>Ensure adherence to railway rules, regulations, and legal requirements.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Law, Compliance, or related field.</li>
+                    <li>Experience in regulatory compliance and risk management.</li>
+                    <li>Strong analytical and reporting skills.</li>
+                    <li>Knowledge of railway compliance frameworks.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Data Analyst</h2>
+                <p>Analyze personnel data to support decision-making and improve HR processes.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Statistics, Data Science, or related field.</li>
+                    <li>Experience in data analysis and visualization tools.</li>
+                    <li>Strong analytical and problem-solving skills.</li>
+                    <li>Knowledge of railway HR systems and databases.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Project Coordinator</h2>
+                <p>Coordinate HR-related projects and initiatives across railway departments.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Project Management or related field.</li>
+                    <li>Experience in project coordination and execution.</li>
+                    <li>Strong organizational and time-management skills.</li>
+                    <li>Knowledge of railway project management practices.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

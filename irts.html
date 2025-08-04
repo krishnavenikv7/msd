@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railway Traffic Service - Government Jobs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Light blue background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+        header {
+            background: linear-gradient(135deg, #90C8F6, #B0E0E6); /* Slightly more vibrant gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Updated job card background colors to lighter shades of #e3f2fd */
+        .job-card:nth-child(1) { background-color: #f0f8ff; } /* Very light blue */
+        .job-card:nth-child(2) { background-color: #eff7fe; } /* Slightly lighter */
+        .job-card:nth-child(3) { background-color: #ecf5fd; } /* Soft blue */
+        .job-card:nth-child(4) { background-color: #eaf3fc; } /* Light pastel */
+        .job-card:nth-child(5) { background-color: #e7f1fb; } /* Subtle blue */
+        .job-card:nth-child(6) { background-color: #e4effa; } /* Pale blue */
+        .job-card:nth-child(7) { background-color: #e1ecf9; } /* Light tint */
+        .job-card:nth-child(8) { background-color: #defaf8; } /* Very pale */
+        .job-card:nth-child(9) { background-color: #dbf8f7; } /* Almost white */
+        .job-card:nth-child(10) { background-color: #d8f5f6; } /* Faint blue */
+        .job-card:nth-child(11) { background-color: #d5f3f5; } /* Ultra-light */
+        .job-card:nth-child(12) { background-color: #d2f0f4; } /* Barely visible */
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+        .job-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+            color: #444; /* Slightly darker gray for subheadings */
+        }
+        .job-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .job-card li {
+            margin-bottom: 0.5rem;
+        }
+        .job-card button {
+            background-color: #90C8F6; /* Slightly darker blue for buttons */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #78B5F2; /* Slightly darker on hover */
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+        /* Button Styling */
+        .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db; /* Blue background */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .go-to-button:hover {
+            background-color: #518db5; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Indian Railway Traffic Service (IRTS)</h1>
+        <p>The Indian Railway Traffic Service is a Group A central service under the Ministry of Railways. It offers exciting career opportunities in railway operations, transportation management, logistics, and passenger services. Freshers can earn ₹8–15 lakh annually, while experienced professionals can earn ₹20–40 lakh or more.</p>
+    </header>
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Train Operations Manager</h2>
+                <p>Oversee the scheduling, movement, and safety of trains across the network.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Engineering or equivalent.</li>
+                    <li>Experience in railway operations or logistics.</li>
+                    <li>Strong leadership and decision-making skills.</li>
+                    <li>Knowledge of railway safety regulations.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Traffic Controller</h2>
+                <p>Monitor and manage railway traffic to ensure smooth operations and minimize delays.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Transportation or related field.</li>
+                    <li>Experience with railway signaling systems.</li>
+                    <li>Ability to work under pressure and multitask.</li>
+                    <li>Knowledge of railway traffic management software.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Logistics Coordinator</h2>
+                <p>Plan and coordinate the movement of goods and materials via railways.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Logistics or Supply Chain Management.</li>
+                    <li>Experience in freight operations and logistics planning.</li>
+                    <li>Strong organizational and communication skills.</li>
+                    <li>Familiarity with railway freight systems.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Station Master</h2>
+                <p>Manage train arrivals, departures, and passenger services at railway stations.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in any discipline (Engineering preferred).</li>
+                    <li>Experience in railway operations or station management.</li>
+                    <li>Strong interpersonal and problem-solving skills.</li>
+                    <li>Knowledge of railway safety protocols.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Freight Operations Specialist</h2>
+                <p>Handle the transportation of freight and ensure efficient logistics management.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Logistics, Supply Chain, or related field.</li>
+                    <li>Experience in freight operations and warehousing.</li>
+                    <li>Strong analytical and organizational skills.</li>
+                    <li>Knowledge of railway freight regulations.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Safety Officer</h2>
+                <p>Ensure compliance with safety regulations and conduct risk assessments.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Safety Engineering or related field.</li>
+                    <li>Certification in occupational safety (e.g., IOSH, NEBOSH).</li>
+                    <li>Experience in safety audits and inspections.</li>
+                    <li>Strong knowledge of railway safety standards.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Passenger Services Manager</h2>
+                <p>Enhance customer experience by managing passenger amenities and services.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Hospitality, Business Administration, or related field.</li>
+                    <li>Experience in customer service or hospitality management.</li>
+                    <li>Strong leadership and communication skills.</li>
+                    <li>Knowledge of railway passenger policies.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Transport Economist</h2>
+                <p>Analyze economic trends and develop strategies to optimize railway revenue.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Economics, Finance, or related field.</li>
+                    <li>Experience in economic analysis and forecasting.</li>
+                    <li>Strong analytical and problem-solving skills.</li>
+                    <li>Knowledge of railway economics and pricing models.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Track Maintenance Engineer</h2>
+                <p>Ensure the maintenance and safety of railway tracks and infrastructure.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Civil Engineering or related field.</li>
+                    <li>Experience in railway track maintenance.</li>
+                    <li>Strong technical and problem-solving skills.</li>
+                    <li>Knowledge of railway infrastructure standards.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Operations Analyst</h2>
+                <p>Analyze operational data to improve efficiency and reduce costs.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Engineering, Operations, or related field.</li>
+                    <li>Experience in data analysis and process optimization.</li>
+                    <li>Strong analytical and reporting skills.</li>
+                    <li>Knowledge of railway operations and KPIs.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Signal & Telecommunication Engineer</h2>
+                <p>Design and maintain signaling systems for safe train operations.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Electrical/Electronics Engineering.</li>
+                    <li>Experience in railway signaling and telecommunication systems.</li>
+                    <li>Strong technical and troubleshooting skills.</li>
+                    <li>Knowledge of railway signaling standards.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>HR & Admin Officer</h2>
+                <p>Manage human resources and administrative functions within the railway system.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Degree in Human Resources or related field.</li>
+                    <li>Experience in HR management and administration.</li>
+                    <li>Strong communication and organizational skills.</li>
+                    <li>Knowledge of labor laws and railway policies.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

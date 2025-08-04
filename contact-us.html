@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Job Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+    color: #333;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #252525;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd900;
+}
+
+/* Contact Section */
+.contact {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.contact h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+button {
+    background: #ffd900;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e6c200;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: #252525;
+    color: white;
+    font-size: 14px;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <a href="sectors.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="resume.html">Create Resume</a>
+    </nav>
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any queries, feel free to reach out to us.</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="e797bde9-cde7-4be2-98de-3a1fb699d5e1">
+        
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+             <label><i class="fa fa-user"></i> Name: </label>
+            <input type="text" name="name" required>
+            <label><i class="fa fa-envelope"></i> Email:</label>
+            <input type="email" name="email" required>
+            <label><i class="fa fa-comment-dots"></i> Issue:</label>
+            <textarea name="message" required></textarea>
+        
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        
+            <button type="submit">Submit Form</button>
+        
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Job Profile. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

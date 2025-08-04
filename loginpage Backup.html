@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.my-login-page {
+            background-image: url("bgimg.jpg"); /* Professional background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .my-login-page .brand {
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+        }
+
+        .my-login-page .brand img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .my-login-page .card-wrapper {
+            width: 400px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .my-login-page .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .my-login-page .card.fat {
+            padding: 20px;
+        }
+
+        .my-login-page .card .card-title {
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+
+        .my-login-page .form-control {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 12px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .my-login-page .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .my-login-page .form-group label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .my-login-page .btn.btn-block {
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .my-login-page .btn.btn-block:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .my-login-page .footer {
+            margin: 20px 0;
+            color: #888;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .my-login-page .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .my-login-page .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 425px) {
+            .my-login-page .card-wrapper {
+                width: 90%;
+            }
+
+            .my-login-page .card.fat {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .my-login-page .card.fat {
+                padding: 10px;
+            }
+
+            .my-login-page .card .card-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="my-login-page">
+    <!-- Login Page -->
+    <section id="login-page" class="h-100">
+        <div class="container h-100">
+            <div class="row justify-content-md-center h-100">
+                <div class="card-wrapper">
+                    <div class="brand">
+                        <img src="joplogo.jpg" alt="Logo">
+                    </div>
+                    <div class="card fat">
+                        <div class="card-body">
+                            <h4 class="card-title">Login</h4>
+                            <form method="POST" class="my-login-validation" novalidate="" id="login-form">
+                                <form method="POST" action="login.php" class="my-login-validation" novalidate="" id="login-form">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input id="email" type="email" class="form-control" name="email" required autofocus>
+                                    <div class="invalid-feedback">
+                                        Email is invalid.
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control" name="password" required data-eye>
+                                    <div class="invalid-feedback">
+                                        Password is required.
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" name="remember" id="remember" class="custom-control-input">
+                                        <label for="remember" class="custom-control-label">Remember Me</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-0">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Login
+                                    </button>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    Don't have an account? <a href="#register-page">Create One</a>
+                                </div>
+                            </form>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        Copyright &copy; 2023 &mdash; Your Company
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Page -->
+    <section id="register-page" class="h-100" style="display: none;">
+        <div class="container h-100">
+            <div class="row justify-content-md-center h-100">
+                <div class="card-wrapper">
+                    <div class="brand">
+                        <img src="joplogo.jpg" alt="Logo">
+                    </div>
+                    <div class="card fat">
+                        <div class="card-body">
+                            <h4 class="card-title">Register</h4>
+                            <form method="POST" class="my-login-validation" novalidate="">
+                                <form method="POST" action="register.php" class="my-login-validation" novalidate="">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" class="form-control" name="name" required>
+                                    <div class="invalid-feedback">
+                                        Name is required.
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input id="email" type="email" class="form-control" name="email" required>
+                                    <div class="invalid-feedback">
+                                        Email is invalid.
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" class="form-control" name="password" required data-eye>
+                                    <div class="invalid-feedback">
+                                        Password is required.
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="custom-checkbox custom-control">
+                                        <input type="checkbox" name="agree" id="agree" class="custom-control-input" required>
+                                        <label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
+                                        <div class="invalid-feedback">
+                                            You must agree to the terms.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-0">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Register
+                                    </button>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    Already have an account? <a href="#login-page">Login</a>
+                                </div>
+                            </form>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        Copyright &copy; 2023 &mdash; Your Company
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // Custom JavaScript
+        $(function() {
+            // Toggle password visibility
+            $("input[type='password'][data-eye]").each(function() {
+                const $this = $(this);
+                const id = 'eye-password-' + $this.attr('id');
+                const toggle = $('<div>', {
+                    text: 'Show',
+                    class: 'btn btn-primary btn-sm',
+                    css: {
+                        position: 'absolute',
+                        right: 10,
+                        top: ($this.outerHeight() / 2) - 12,
+                        padding: '2px 7px',
+                        fontSize: 12,
+                        cursor: 'pointer',
+                    },
+                    click: function() {
+                        if ($this.attr('type') === 'password') {
+                            $this.attr('type', 'text');
+                            $(this).text('Hide');
+                        } else {
+                            $this.attr('type', 'password');
+                            $(this).text('Show');
+                        }
+                    }
+                });
+
+                $this.wrap($('<div>', {
+                    style: 'position:relative',
+                    id: id
+                })).after(toggle);
+            });
+
+            // Form validation and redirect after login
+            $("#login-form").submit(function(event) {
+                event.preventDefault();
+                if (this.checkValidity() === false) {
+                    event.stopPropagation();
+                } else {
+                    // Redirect to sectors.html after successful login
+                    window.location.href = "sectors.html";
+                }
+                $(this).addClass('was-validated');
+            });
+
+            // Switch between login and register pages
+            $('a[href^="#"]').on('click', function(event) {
+                event.preventDefault();
+                const target = $(this).attr('href');
+                $('section').hide();
+                $(target).show();
+            });
+        });
+    </script>
+</body>
+</html>

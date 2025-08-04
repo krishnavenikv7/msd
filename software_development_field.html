@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development Fields</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Light blue background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+        header {
+            background: linear-gradient(135deg, #90C8F6, #B0E0E6); /* Slightly more vibrant gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Updated job card background colors to lighter shades of #e3f2fd */
+        .job-card:nth-child(1) { background-color: #f0f8ff; } /* Very light blue */
+        .job-card:nth-child(2) { background-color: #eff7fe; } /* Slightly lighter */
+        .job-card:nth-child(3) { background-color: #ecf5fd; } /* Soft blue */
+        .job-card:nth-child(4) { background-color: #eaf3fc; } /* Light pastel */
+        .job-card:nth-child(5) { background-color: #e7f1fb; } /* Subtle blue */
+        .job-card:nth-child(6) { background-color: #e4effa; } /* Pale blue */
+        .job-card:nth-child(7) { background-color: #e1ecf9; } /* Light tint */
+        .job-card:nth-child(8) { background-color: #defaf8; } /* Very pale */
+        .job-card:nth-child(9) { background-color: #dbf8f7; } /* Almost white */
+        .job-card:nth-child(10) { background-color: #d8f5f6; } /* Faint blue */
+        .job-card:nth-child(11) { background-color: #d5f3f5; } /* Ultra-light */
+        .job-card:nth-child(12) { background-color: #d2f0f4; } /* Barely visible */
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+        .job-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+            color: #444; /* Slightly darker gray for subheadings */
+        }
+        .job-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .job-card li {
+            margin-bottom: 0.5rem;
+        }
+        .job-card button {
+            background-color: #90C8F6; /* Slightly darker blue for buttons */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #78B5F2; /* Slightly darker on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+        /* Button Styling */
+        .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db; /* Blue background */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .go-to-button:hover {
+            background-color: #518db5; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Software and Development Field</h1>
+        <p>The Software and Development field creates software, websites, and apps. Developers write code, fix bugs, and ensure security. With growing technology, demand is high. Freshers earn ₹3.5–8 lakh, mid-level ₹8–15 lakh, and experienced ₹15–25 lakh. Senior roles can earn up to ₹50 lakh. This field offers great pay and job security.</p>
+    </header>
+
+    <section class="available-fields">
+        <h2>Available Fields</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Software Developer</h2>
+                <p>Create robust software applications using programming languages like Java, Python, or C++. Work on algorithms, data structures, and software architecture.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Strong knowledge of Data Structures & Algorithms.</li>
+                    <li>Experience with databases (SQL, NoSQL).</li>
+                    <li>Internships, projects, or GitHub contributions.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Frontend Developer</h2>
+                <p>Create responsive and user-friendly web interfaces using HTML, CSS, JavaScript, and React.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in HTML, CSS, JavaScript.</li>
+                    <li>Experience with front-end frameworks (React, Angular, Vue.js).</li>
+                    <li>Portfolio with projects and strong problem-solving skills.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Backend Developer</h2>
+                <p>Build server-side logic and APIs using Node.js, Python, or Java. Experience with databases required.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in backend programming languages (Node.js, Python, Java).</li>
+                    <li>Experience with databases (MySQL, MongoDB).</li>
+                    <li>Understanding of RESTful APIs and microservices.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Full Stack Developer</h2>
+                <p>Work on both frontend and backend development. Proficiency in React, Node.js, and MongoDB is a plus.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in both frontend (React) and backend (Node.js) technologies.</li>
+                    <li>Experience with databases (MongoDB, MySQL).</li>
+                    <li>Understanding of full-stack development principles.</li>
+                </ul>
+                <button>Go to</button><a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>DevOps Engineer</h2>
+                <p>Automate deployment processes and manage cloud infrastructure using AWS, Docker, and Kubernetes.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Experience with cloud platforms (AWS, Azure, Google Cloud).</li>
+                    <li>Proficiency in automation tools (Docker, Kubernetes).</li>
+                    <li>Understanding of CI/CD pipelines.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Mobile App Developer</h2>
+                <p>Build cross-platform mobile applications using Flutter or React Native.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in mobile development frameworks (Flutter, React Native).</li>
+                    <li>Experience with app stores (Google Play, Apple App Store).</li>
+                    <li>Understanding of mobile UI/UX design principles.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Data Scientist</h2>
+                <p>Analyze large datasets and build machine learning models using Python and TensorFlow.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s or Master’s degree in Data Science, Statistics, or related field.</li>
+                    <li>Proficiency in Python and data analysis libraries (Pandas, NumPy).</li>
+                    <li>Experience with machine learning frameworks (TensorFlow, PyTorch).</li>
+                    <li>Strong statistical and mathematical foundation.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>QA Automation Engineer</h2>
+                <p>Write automated test scripts and ensure software quality using Selenium and JUnit.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in test automation tools (Selenium, JUnit).</li>
+                    <li>Experience with testing methodologies (unit testing, integration testing).</li>
+                    <li>Strong analytical and debugging skills.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Cloud Architect</h2>
+                <p>Design and implement scalable cloud solutions using AWS, Azure, or Google Cloud.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Experience with cloud platforms (AWS, Azure, Google Cloud).</li>
+                    <li>Understanding of cloud architecture and best practices.</li>
+                    <li>Proficiency in cloud-native technologies (Serverless, Kubernetes).</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>UX/UI Designer</h2>
+                <p>Create intuitive and visually appealing designs for web and mobile applications using Figma or Adobe XD.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Design or related field.</li>
+                    <li>Proficiency in design tools (Figma, Adobe XD, Sketch).</li>
+                    <li>Understanding of UX/UI principles and wireframing.</li>
+                    <li>Portfolio showcasing design projects.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Cybersecurity Specialist</h2>
+                <p>Protect systems and networks from cyber threats. Knowledge of ethical hacking tools is a plus.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Cybersecurity or related field.</li>
+                    <li>Experience with cybersecurity tools and frameworks.</li>
+                    <li>Understanding of network security and encryption.</li>
+                    <li>Certifications (CISSP, CEH) are a plus.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>AI/ML Engineer</h2>
+                <p>Develop artificial intelligence and machine learning models for real-world applications.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s or Master’s degree in Computer Science, AI, or related field.</li>
+                    <li>Proficiency in Python and ML frameworks (TensorFlow, PyTorch).</li>
+                    <li>Experience with deep learning and neural networks.</li>
+                    <li>Strong mathematical and statistical foundation.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
