@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental & Renewable Energy Engineering</title>
+
+    <!-- Embedded Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9; /* Soft green background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #a5d6a7, #81c784); /* Nature-inspired green gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+
+        /* Available Roles Section */
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+
+        /* Job Card Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+
+        /* Individual Job Cards */
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Custom Background Colors for Job Cards (Nature-Inspired Tones) */
+        .job-card:nth-child(1) { background-color: #e8f5e9; } /* Light green */
+        .job-card:nth-child(2) { background-color: #c8e6c9; } /* Pale green */
+        .job-card:nth-child(3) { background-color: #a5d6a7; } /* Soft green */
+        .job-card:nth-child(4) { background-color: #81c784; } /* Medium green */
+        .job-card:nth-child(5) { background-color: #66bb6a; } /* Vibrant green */
+        .job-card:nth-child(6) { background-color: #4caf50; } /* Deep green */
+        .job-card:nth-child(7) { background-color: #b2dfdb; } /* Teal-green */
+        .job-card:nth-child(8) { background-color: #80cbc4; } /* Soft teal */
+        .job-card:nth-child(9) { background-color: #4db6ac; } /* Medium teal */
+        .job-card:nth-child(10) { background-color: #26a69a; } /* Deep teal */
+        .job-card:nth-child(11) { background-color: #e0f2f1; } /* Light teal */
+        .job-card:nth-child(12) { background-color: #b2ebf2; } /* Pale blue */
+
+        /* Hover Effects for Job Cards */
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Job Card Content Styling */
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+
+        /* Button Styling */
+        .job-card button {
+            background-color: #81c784; /* Medium green for buttons */
+            color: black; /* Black text color */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #66bb6a; /* Vibrant green on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Environmental & Renewable Energy Engineering</h1>
+        <p>
+            Environmental and Renewable Energy Engineering focuses on sustainable practices and technologies to address climate change, energy efficiency, and resource conservation. 
+            Freshers earn ₹4–12 lakh, mid-level professionals ₹12–30 lakh, and experienced engineers ₹30–70 lakh. Senior roles can exceed ₹1 crore annually.
+        </p>
+    </header>
+
+    <!-- Available Roles Section -->
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Solar Engineer</h2>
+                <p>Design and implement solar energy systems for residential, commercial, or industrial use.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Wind Energy Specialist</h2>
+                <p>Develop and maintain wind turbines and wind farms for clean energy generation.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Environmental Consultant</h2>
+                <p>Advise organizations on environmental regulations, sustainability, and green practices.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Energy Auditor</h2>
+                <p>Evaluate energy usage in buildings and recommend efficiency improvements.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Hydrologist</h2>
+                <p>Study water resources and manage water-related projects like dams, irrigation, and flood control.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Biomass Engineer</h2>
+                <p>Work on bioenergy systems that convert organic materials into energy sources.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Geothermal Engineer</h2>
+                <p>Design systems to harness heat from the Earth's core for heating or electricity generation.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Waste Management Specialist</h2>
+                <p>Develop strategies for waste reduction, recycling, and sustainable disposal.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Renewable Energy Analyst</h2>
+                <p>Analyze data to optimize renewable energy systems and improve performance.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Climate Change Analyst</h2>
+                <p>Assess the impact of climate change and propose mitigation strategies.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Green Building Engineer</h2>
+                <p>Design eco-friendly buildings with energy-efficient systems and sustainable materials.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Water Resource Engineer</h2>
+                <p>Plan and manage projects related to water supply, treatment, and distribution.</p>
+                <button>Go to</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companies in India</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding-top: 50px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .back-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
+    }
+    .back-button:hover {
+      background-color: #0056b3;
+    }
+    .search-container {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .search-bar {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+      transition: border-color 0.3s;
+    }
+    .search-bar:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+    .company-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .company-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .company-info {
+      flex: 1;
+    }
+    .company-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0077b6;
+    }
+    .company-description {
+      margin-top: 10px;
+      color: #555;
+    }
+    .company-type, .company-branches {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+    .company-logo img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+    .btn-details {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn-details:hover {
+      background-color: #0056b3;
+    }
+    .company-details-template {
+      display: none;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      padding: 20px;
+      position: relative;
+    }
+    .close-btn {
+      padding: 10px 20px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      transition: background-color 0.3s;
+    }
+    .close-btn:hover {
+      background-color: #c82333;
+    }
+    .company-details-template h3 {
+      color: #0077b6;
+    }
+    .company-details-template p {
+      color: #555;
+    }
+    .company-details-template ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .company-details-template a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+    .company-details-template a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Companies in India</h1>
+    <a href="sectors.html" class="back-button">Back</a>
+    
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-bar" placeholder="Search companies by name..." oninput="filterCompanies()">
+    </div>
+
+
+    <!-- Company 1: TCS -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Tata Consultancy Services</div>
+            <div class="company-description">Tata Consultancy Services (TCS) is an IT services, consulting, and business solutions company that provides a wide range of IT services.</div>
+            <div class="company-type">Type: Service & Product</div>
+            <div class="company-branches">Branches: Mumbai, Bengaluru, Hyderabad, Chennai</div>
+        </div>
+        <div class="company-logo">
+              <img src="tcs.jpg" alt="TCS Logo"> 
+        </div>
+        <button class="btn-details" onclick="showDetails('tcs')"> View Details</button>
+    </div>
+
+    <div id="tcs" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('tcs')">Close</button>
+        <h3>Tata Consultancy Services - Detailed Information</h3>
+        <p>Founded in 1968, TCS is a global leader in IT services and consulting. It has been recognized for its excellence in service delivery and innovation. TCS offers a variety of IT services including software solutions, cloud computing, and business process outsourcing.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Mumbai</li>
+            <li>Bengaluru</li>
+            <li>Hyderabad</li>
+            <li>Chennai</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.tcs.com" target="_blank">TCS Website</a></p>
+    </div>
+
+    <!-- Company 2: Reliance Industries -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Reliance Industries</div>
+            <div class="company-description">Reliance Industries is a conglomerate with businesses across petrochemicals, refining, oil & gas exploration, retail, and telecommunications.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Mumbai, Delhi, Ahmedabad, Kolkata</div>
+        </div>
+        <div class="company-logo">
+            <img src="relianceindustries.jpg" alt="Reliance Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('reliance')">View Details</button>
+    </div>
+
+    <div id="reliance" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('reliance')">Close</button>
+        <h3>Reliance Industries - Detailed Information</h3>
+        <p>Founded in 1966, Reliance Industries is one of India's largest and most diverse conglomerates. Its businesses span various sectors including petrochemicals, oil and gas exploration, telecommunications (Jio), and retail.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Mumbai</li>
+            <li>Delhi</li>
+            <li>Ahmedabad</li>
+            <li>Kolkata</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.ril.com" target="_blank">Reliance Industries Website</a></p>
+    </div>
+
+    <!-- Add more companies below following the same structure -->
+
+    <!-- Company 3: Amazon -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Amazon</div>
+            <div class="company-description">Amazon is a global leader in e-commerce, cloud computing, digital streaming, and artificial intelligence.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Bengaluru, Hyderabad, Chennai, Delhi</div>
+        </div>
+        <div class="company-logo">
+            <img src="amazon.jpg" alt="Amazon Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('amazon')">View Details</button>
+    </div>
+
+    <div id="amazon" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('amazon')">Close</button>
+        <h3>Amazon - Detailed Information</h3>
+        <p>Founded in 1994, Amazon is one of the world's largest e-commerce and cloud computing companies. It offers a wide range of products and services, including Amazon Web Services (AWS), Prime Video, and Alexa.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Hyderabad</li>
+            <li>Chennai</li>
+            <li>Delhi</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.amazon.com" target="_blank">Amazon Website</a></p>
+    </div>
+
+    <!-- Company 4: Meta -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Meta</div>
+            <div class="company-description">Meta (formerly Facebook) is a technology company that builds products to connect people and build communities.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Hyderabad, Bengaluru, Gurgaon</div>
+        </div>
+        <div class="company-logo">
+              <img src="meta.jpg" alt="Meta Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('meta')">  View Details</button>
+    </div>
+
+    <div id="meta" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('meta')">Close</button>
+        <h3>Meta - Detailed Information</h3>
+        <p>Founded in 2004, Meta is the parent company of Facebook, Instagram, WhatsApp, and Oculus. It focuses on building technologies that help people connect and share experiences.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Hyderabad</li>
+            <li>Bengaluru</li>
+            <li>Gurgaon</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.meta.com" target="_blank">Meta Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 5: Google -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Google</div>
+            <div class="company-description">Google is a multinational technology company specializing in Internet-related services and products.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Hyderabad, Bengaluru, Gurgaon</div>
+        </div>
+        <div class="company-logo">
+            <img src="google.jpg" alt="Google Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('google')">View Details</button>
+    </div>
+
+    <div id="google" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('google')">Close</button>
+        <h3>Google - Detailed Information</h3>
+        <p>Founded in 1998, Google is a global leader in search engine technology, online advertising, and cloud computing. It offers products like Google Search, YouTube, Android, and Google Cloud.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Hyderabad</li>
+            <li>Bengaluru</li>
+            <li>Gurgaon</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.google.com" target="_blank">Google Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 6: Uber -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Uber</div>
+            <div class="company-description">Uber is a technology company that provides ride-hailing, food delivery, and freight transportation services.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru, Hyderabad, Delhi</div>
+        </div>
+        <div class="company-logo">
+            <img src="uber.jpg" alt="Uber Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('uber')">View Details</button>
+    </div>
+
+    <div id="uber" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('uber')">Close</button>
+        <h3>Uber - Detailed Information</h3>
+        <p>Founded in 2009, Uber is a global leader in ride-hailing and mobility services. It also operates Uber Eats for food delivery and Uber Freight for logistics.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Hyderabad</li>
+            <li>Delhi</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.uber.com" target="_blank">Uber Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 7: Bloomberg -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Bloomberg</div>
+            <div class="company-description">Bloomberg is a global financial, software, and media company known for its Bloomberg Terminal.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Mumbai, Delhi, Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="bloomberg.jpg" alt="Bloomberg Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('bloomberg')">View Details</button>
+    </div>
+
+    <div id="bloomberg" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('bloomberg')">Close</button>
+        <h3>Bloomberg - Detailed Information</h3>
+        <p>Founded in 1981, Bloomberg is a leading provider of financial data, news, and analytics. Its flagship product, the Bloomberg Terminal, is widely used by financial professionals.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Mumbai</li>
+            <li>Delhi</li>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.bloomberg.com" target="_blank">Bloomberg Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 8: Apple -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Apple</div>
+            <div class="company-description">Apple is a technology company that designs, manufactures, and sells consumer electronics, software, and online services.</div>
+            <div class="company-type">Type: Product</div>
+            <div class="company-branches">Branches: Bengaluru, Hyderabad, Delhi</div>
+        </div>
+        <div class="company-logo">
+            <img src="apple.jpg" alt="Apple Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('apple')">View Details</button>
+    </div>
+
+    <div id="apple" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('apple')">Close</button>
+        <h3>Apple - Detailed Information</h3>
+        <p>Founded in 1976, Apple is a global leader in consumer electronics, software, and services. Its products include the iPhone, iPad, Mac, Apple Watch, and Apple TV.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Hyderabad</li>
+            <li>Delhi</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.apple.com" target="_blank">Apple Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 9: TikTok -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">TikTok</div>
+            <div class="company-description">TikTok is a social media platform for creating, sharing, and discovering short videos.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru, Mumbai</div>
+        </div>
+        <div class="company-logo">
+            <img src="tiktok.jpg" alt="TikTok Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('tiktok')">View Details</button>
+    </div>
+
+    <div id="tiktok" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('tiktok')">Close</button>
+        <h3>TikTok - Detailed Information</h3>
+        <p>Founded in 2016, TikTok is a popular social media platform for short-form videos. It has gained immense popularity worldwide, especially among younger audiences.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Mumbai</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.tiktok.com" target="_blank">TikTok Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 10: Microsoft -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Microsoft</div>
+            <div class="company-description">Microsoft is a technology company that develops, manufactures, licenses, and supports software, hardware, and services.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Hyderabad, Bengaluru, Noida</div>
+        </div>
+        <div class="company-logo">
+            <img src="microsoft.jpg" alt="Microsoft Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('microsoft')">View Details</button>
+    </div>
+
+    <div id="microsoft" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('microsoft')">Close</button>
+        <h3>Microsoft - Detailed Information</h3>
+        <p>Founded in 1975, Microsoft is a global leader in software, hardware, and cloud services. Its products include Windows, Office, Azure, and Xbox.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Hyderabad</li>
+            <li>Bengaluru</li>
+            <li>Noida</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.microsoft.com" target="_blank">Microsoft Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 11: Oracle -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Oracle</div>
+            <div class="company-description">Oracle is a multinational technology company specializing in database software, cloud solutions, and enterprise software.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Bengaluru, Hyderabad, Gurgaon</div>
+        </div>
+        <div class="company-logo">
+            <img src="oracle.jpg" alt="Oracle Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('oracle')">View Details</button>
+    </div>
+
+    <div id="oracle" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('oracle')">Close</button>
+        <h3>Oracle - Detailed Information</h3>
+        <p>Founded in 1977, Oracle is a global leader in database software, cloud solutions, and enterprise software. Its products include Oracle Database, Java, and Oracle Cloud.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Hyderabad</li>
+            <li>Gurgaon</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.oracle.com" target="_blank">Oracle Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 12: LinkedIn -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">LinkedIn</div>
+            <div class="company-description">LinkedIn is a professional networking platform that connects professionals worldwide.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru, Mumbai</div>
+        </div>
+        <div class="company-logo">
+            <img src="linkedin.jpg" alt="LinkedIn Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('linkedin')">View Details</button>
+    </div>
+
+    <div id="linkedin" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('linkedin')">Close</button>
+        <h3>LinkedIn - Detailed Information</h3>
+        <p>Founded in 2002, LinkedIn is a professional networking platform that allows users to connect, share, and discover opportunities. It is widely used for recruitment and professional development.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Mumbai</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.linkedin.com" target="_blank">LinkedIn Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 13: Goldman Sachs -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Goldman Sachs</div>
+            <div class="company-description">Goldman Sachs is a global investment banking, securities, and investment management firm.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru, Mumbai</div>
+        </div>
+        <div class="company-logo">
+            <img src="golmansachs.jpg" alt="Goldman Sachs Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('goldman-sachs')">View Details</button>
+    </div>
+
+    <div id="goldman-sachs" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('goldman-sachs')">Close</button>
+        <h3>Goldman Sachs - Detailed Information</h3>
+        <p>Founded in 1869, Goldman Sachs is a leading global investment banking, securities, and investment management firm. It provides financial services to corporations, governments, and individuals.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Mumbai</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.goldmansachs.com" target="_blank">Goldman Sachs Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 14: Snap -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Snap</div>
+            <div class="company-description">Snap is a technology company known for its social media platform Snapchat.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="snapchat.jpg" alt="Snap Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('snap')">View Details</button>
+    </div>
+
+    <div id="snap" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('snap')">Close</button>
+        <h3>Snap - Detailed Information</h3>
+        <p>Founded in 2011, Snap is the parent company of Snapchat, a popular social media platform for sharing photos and videos. It also offers AR (Augmented Reality) features.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.snap.com" target="_blank">Snap Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 15: Adobe -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Adobe</div>
+            <div class="company-description">Adobe is a software company known for its creative and multimedia software products.</div>
+            <div class="company-type">Type: Product</div>
+            <div class="company-branches">Branches: Bengaluru, Noida</div>
+        </div>
+        <div class="company-logo">
+            <img src="adobe.jpg" alt="Adobe Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('adobe')">View Details</button>
+    </div>
+
+    <div id="adobe" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('adobe')">Close</button>
+        <h3>Adobe - Detailed Information</h3>
+        <p>Founded in 1982, Adobe is a global leader in creative and multimedia software. Its products include Photoshop, Illustrator, Premiere Pro, and Acrobat.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Noida</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.adobe.com" target="_blank">Adobe Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 16: Walmart Labs -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Walmart Labs</div>
+            <div class="company-description">Walmart Labs is the technology arm of Walmart, focusing on e-commerce and retail innovation.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="walmartlabs.jpg" alt="Walmart Labs Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('walmart-labs')">View Details</button>
+    </div>
+
+    <div id="walmart-labs" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('walmart-labs')">Close</button>
+        <h3>Walmart Labs - Detailed Information</h3>
+        <p>Walmart Labs is the technology division of Walmart, focusing on e-commerce, retail innovation, and digital transformation. It develops tools and platforms to enhance the shopping experience.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.walmartlabs.com" target="_blank">Walmart Labs Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 17: Salesforce -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Salesforce</div>
+            <div class="company-description">Salesforce is a cloud-based software company specializing in customer relationship management (CRM).</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Hyderabad, Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="salesforce.jpg" alt="Salesforce Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('salesforce')">View Details</button>
+    </div>
+
+    <div id="salesforce" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('salesforce')">Close</button>
+        <h3>Salesforce - Detailed Information</h3>
+        <p>Founded in 1999, Salesforce is a global leader in cloud-based CRM software. It offers solutions for sales, marketing, customer service, and analytics.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Hyderabad</li>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.salesforce.com" target="_blank">Salesforce Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 18: PayPal -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">PayPal</div>
+            <div class="company-description">PayPal is a global online payment system that supports online money transfers and serves as an alternative to traditional paper methods.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru, Chennai</div>
+        </div>
+        <div class="company-logo">
+            <img src="paypal.jpg" alt="PayPal Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('paypal')">View Details</button>
+    </div>
+
+    <div id="paypal" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('paypal')">Close</button>
+        <h3>PayPal - Detailed Information</h3>
+        <p>Founded in 1998, PayPal is a global leader in online payment systems. It allows users to send and receive money securely over the internet.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Chennai</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.paypal.com" target="_blank">PayPal Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 19: Airbnb -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Airbnb</div>
+            <div class="company-description">Airbnb is an online marketplace for lodging, primarily homestays for vacation rentals, and tourism activities.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="airbnb.jpg" alt="Airbnb Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('airbnb')">View Details</button>
+    </div>
+
+    <div id="airbnb" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('airbnb')">Close</button>
+        <h3>Airbnb - Detailed Information</h3>
+        <p>Founded in 2008, Airbnb is a global online marketplace for lodging and tourism experiences. It connects hosts with guests looking for unique accommodations.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.airbnb.com" target="_blank">Airbnb Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 20: Citadel -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Citadel</div>
+            <div class="company-description">Citadel is a global investment firm that manages hedge funds and provides market-making services.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="citadel.jpg" alt="Citadel Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('citadel')">View Details</button>
+    </div>
+
+    <div id="citadel" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('citadel')">Close</button>
+        <h3>Citadel - Detailed Information</h3>
+        <p>Founded in 1990, Citadel is a leading global investment firm specializing in hedge funds and market-making services. It is known for its quantitative and technology-driven approach.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.citadel.com" target="_blank">Citadel Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 21: Atlassian -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Atlassian</div>
+            <div class="company-description">Atlassian is a software company that develops products for software developers, project managers, and content management.</div>
+            <div class="company-type">Type: Product</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="atlassian.jpg" alt="Atlassian Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('atlassian')">View Details</button>
+    </div>
+
+    <div id="atlassian" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('atlassian')">Close</button>
+        <h3>Atlassian - Detailed Information</h3>
+        <p>Founded in 2002, Atlassian is a leading software company that develops tools for software development, project management, and collaboration. Its products include Jira, Confluence, and Bitbucket.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.atlassian.com" target="_blank">Atlassian Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 22: DoorDash -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">DoorDash</div>
+            <div class="company-description">DoorDash is a food delivery platform that connects customers with local restaurants.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="doordash.jpg" alt="DoorDash Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('doordash')">View Details</button>
+    </div>
+
+    <div id="doordash" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('doordash')">Close</button>
+        <h3>DoorDash - Detailed Information</h3>
+        <p>Founded in 2013, DoorDash is a leading food delivery platform in the United States. It connects customers with local restaurants and offers fast delivery services.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.doordash.com" target="_blank">DoorDash Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 23: IBM -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">IBM</div>
+            <div class="company-description">IBM is a multinational technology company that provides hardware, software, and consulting services.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Bengaluru, Pune, Delhi</div>
+        </div>
+        <div class="company-logo">
+            <img src="ibm.jpg" alt="IBM Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('ibm')">View Details</button>
+    </div>
+
+    <div id="ibm" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('ibm')">Close</button>
+        <h3>IBM - Detailed Information</h3>
+        <p>Founded in 1911, IBM is a global leader in technology and consulting services. It offers a wide range of products and services, including cloud computing, AI, and blockchain.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Pune</li>
+            <li>Delhi</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.ibm.com" target="_blank">IBM Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 24: Cisco -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Cisco</div>
+            <div class="company-description">Cisco is a multinational technology company that designs, manufactures, and sells networking hardware, software, and telecommunications equipment.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Bengaluru, Chennai</div>
+        </div>
+        <div class="company-logo">
+            <img src="cisco.jpg" alt="Cisco Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('cisco')">View Details</button>
+    </div>
+
+    <div id="cisco" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('cisco')">Close</button>
+        <h3>Cisco - Detailed Information</h3>
+        <p>Founded in 1984, Cisco is a global leader in networking hardware, software, and telecommunications equipment. It provides solutions for networking, security, and collaboration.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Chennai</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.cisco.com" target="_blank">Cisco Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 25: Pinterest -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Pinterest</div>
+            <div class="company-description">Pinterest is a social media platform that allows users to discover and save ideas for various projects and interests.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="pintrest.jpg" alt="Pinterest Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('pinterest')">View Details</button>
+    </div>
+
+    <div id="pinterest" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('pinterest')">Close</button>
+        <h3>Pinterest - Detailed Information</h3>
+        <p>Founded in 2010, Pinterest is a social media platform that allows users to discover and save ideas for various projects, interests, and hobbies. It is widely used for inspiration and planning.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.pinterest.com" target="_blank">Pinterest Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 26: Capital One -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Capital One</div>
+            <div class="company-description">Capital One is a financial services company specializing in credit cards, banking, and loans.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="capitalone.jpg" alt="Capital One Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('capital-one')">View Details</button>
+    </div>
+
+    <div id="capital-one" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('capital-one')">Close</button>
+        <h3>Capital One - Detailed Information</h3>
+        <p>Founded in 1994, Capital One is a leading financial services company specializing in credit cards, banking, and loans. It is known for its innovative approach to financial products.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.capitalone.com" target="_blank">Capital One Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 27: Tesla -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Tesla</div>
+            <div class="company-description">Tesla is an electric vehicle and clean energy company that designs and manufactures electric cars, batteries, and solar products.</div>
+            <div class="company-type">Type: Product</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="tesla.jpg" alt="Tesla Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('tesla')">View Details</button>
+    </div>
+
+    <div id="tesla" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('tesla')">Close</button>
+        <h3>Tesla - Detailed Information</h3>
+        <p>Founded in 2003, Tesla is a global leader in electric vehicles and clean energy. Its products include electric cars, solar panels, and energy storage solutions.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.tesla.com" target="_blank">Tesla Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 28: Roblox -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Roblox</div>
+            <div class="company-description">Roblox is an online platform that allows users to create, share, and play games.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="roblox.jpg" alt="Roblox Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('roblox')">View Details</button>
+    </div>
+
+    <div id="roblox" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('roblox')">Close</button>
+        <h3>Roblox - Detailed Information</h3>
+        <p>Founded in 2004, Roblox is an online platform that allows users to create, share, and play games. It is popular among younger audiences and offers a wide range of user-generated content.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.roblox.com" target="_blank">Roblox Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 29: Snowflake -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Snowflake</div>
+            <div class="company-description">Snowflake is a cloud-based data warehousing company that provides data storage and analytics solutions.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="snowflake.jpg" alt="Snowflake Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('snowflake')">View Details</button>
+    </div>
+
+    <div id="snowflake" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('snowflake')">Close</button>
+        <h3>Snowflake - Detailed Information</h3>
+        <p>Founded in 2012, Snowflake is a cloud-based data warehousing company that provides scalable and secure data storage and analytics solutions. It is widely used for big data processing.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.snowflake.com" target="_blank">Snowflake Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 30: Yandex -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Yandex</div>
+            <div class="company-description">Yandex is a Russian multinational technology company that provides Internet-related products and services.</div>
+            <div class="company-type">Type: Product & Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="yandex.jpg" alt="Yandex Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('yandex')">View Details</button>
+    </div>
+
+    <div id="yandex" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('yandex')">Close</button>
+        <h3>Yandex - Detailed Information</h3>
+        <p>Founded in 1997, Yandex is a leading Russian technology company that provides Internet-related products and services, including search engines, e-commerce, and ride-hailing.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.yandex.com" target="_blank">Yandex Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 31: Visa -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Visa</div>
+            <div class="company-description">Visa is a global payments technology company that facilitates electronic funds transfers.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="visa.jpg" alt="Visa Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('visa')">View Details</button>
+    </div>
+
+    <div id="visa" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('visa')">Close</button>
+        <h3>Visa - Detailed Information</h3>
+        <p>Founded in 1958, Visa is a global leader in payments technology. It facilitates electronic funds transfers and provides secure payment solutions worldwide.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.visa.com" target="_blank">Visa Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 32: Nvidia -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Nvidia</div>
+            <div class="company-description">Nvidia is a technology company that designs and manufactures graphics processing units (GPUs) and other computing products.</div>
+            <div class="company-type">Type: Product</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="nvidia.jpg" alt="Nvidia Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('nvidia')">View Details</button>
+    </div>
+
+    <div id="nvidia" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('nvidia')">Close</button>
+        <h3>Nvidia - Detailed Information</h3>
+        <p>Founded in 1993, Nvidia is a global leader in graphics processing units (GPUs) and computing technologies. Its products are widely used in gaming, AI, and data centers.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.nvidia.com" target="_blank">Nvidia Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 33: Netflix -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Netflix</div>
+            <div class="company-description">Netflix is a streaming service that offers a wide variety of TV shows, movies, and documentaries.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="netflix.jpg" alt="Netflix Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('netflix')">View Details</button>
+    </div>
+
+    <div id="netflix" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('netflix')">Close</button>
+        <h3>Netflix - Detailed Information</h3>
+        <p>Founded in 1997, Netflix is a leading streaming service that offers a wide variety of TV shows, movies, and documentaries. It is known for its original content and global reach.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.netflix.com" target="_blank">Netflix Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 34: ByteDance -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">ByteDance</div>
+            <div class="company-description">ByteDance is a technology company that owns and operates popular social media platforms like TikTok and Douyin.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="bytedance.jpg" alt="ByteDance Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('bytedance')">View Details</button>
+    </div>
+
+    <div id="bytedance" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('bytedance')">Close</button>
+        <h3>ByteDance - Detailed Information</h3>
+        <p>Founded in 2012, ByteDance is a leading technology company that owns and operates popular social media platforms like TikTok and Douyin. It is known for its innovative content recommendation algorithms.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.bytedance.com" target="_blank">ByteDance Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 35: Databricks -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Databricks</div>
+            <div class="company-description">Databricks is a data and AI company that provides a unified analytics platform for big data and machine learning.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="databriks.jpg" alt="Databricks Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('databricks')">View Details</button>
+    </div>
+
+    <div id="databricks" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('databricks')">Close</button>
+        <h3>Databricks - Detailed Information</h3>
+        <p>Founded in 2013, Databricks is a leading data and AI company that provides a unified analytics platform for big data and machine learning. It is widely used for data engineering and analytics.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.databricks.com" target="_blank">Databricks Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 36: J.P. Morgan -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">J.P. Morgan</div>
+            <div class="company-description">J.P. Morgan is a global financial services firm that provides investment banking, asset management, and private banking services.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru, Mumbai</div>
+        </div>
+        <div class="company-logo">
+            <img src="morgan.jpg" alt="J.P. Morgan Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('jp-morgan')">View Details</button>
+    </div>
+
+    <div id="jp-morgan" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('jp-morgan')">Close</button>
+        <h3>J.P. Morgan - Detailed Information</h3>
+        <p>Founded in 1799, J.P. Morgan is a leading global financial services firm. It provides investment banking, asset management, and private banking services to clients worldwide.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Mumbai</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.jpmorgan.com" target="_blank">J.P. Morgan Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 37: Expedia -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Expedia</div>
+            <div class="company-description">Expedia is an online travel company that provides travel booking services for flights, hotels, and vacation packages.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="Expedia.jpg" alt="Expedia Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('expedia')">View Details</button>
+    </div>
+
+    <div id="expedia" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('expedia')">Close</button>
+        <h3>Expedia - Detailed Information</h3>
+        <p>Founded in 1996, Expedia is a leading online travel company that provides booking services for flights, hotels, and vacation packages. It operates multiple travel brands worldwide.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.expedia.com" target="_blank">Expedia Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 38: Yahoo -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">Yahoo</div>
+            <div class="company-description">Yahoo is a web services provider that offers search engines, email, news, and other online services.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="yahoo.jpg" alt="Yahoo Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('yahoo')">View Details</button>
+    </div>
+
+    <div id="yahoo" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('yahoo')">Close</button>
+        <h3>Yahoo - Detailed Information</h3>
+        <p>Founded in 1994, Yahoo is a web services provider that offers search engines, email, news, and other online services. It was one of the pioneers of the Internet era.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.yahoo.com" target="_blank">Yahoo Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 39: eBay -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">eBay</div>
+            <div class="company-description">eBay is an online marketplace that allows individuals and businesses to buy and sell goods globally.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="ebay.jpg" alt="eBay Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('ebay')">View Details</button>
+    </div>
+
+    <div id="ebay" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('ebay')">Close</button>
+        <h3>eBay - Detailed Information</h3>
+        <p>Founded in 1995, eBay is a global online marketplace that allows individuals and businesses to buy and sell goods. It is known for its auction-style listings and diverse product offerings.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+        <p>For more details, visit <a href="https://www.ebay.com" target="_blank">eBay Website</a></p>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- Company 40: DE Shaw -->
+    <div class="company-card">
+        <div class="company-info">
+            <div class="company-name">DE Shaw</div>
+            <div class="company-description">DE Shaw is a global investment and technology development firm that specializes in quantitative trading and investment management.</div>
+            <div class="company-type">Type: Service</div>
+            <div class="company-branches">Branches: Bengaluru</div>
+        </div>
+        <div class="company-logo">
+            <img src="de sahw.jpg" alt="DE Shaw Logo">
+        </div>
+        <button class="btn-details" onclick="showDetails('de-shaw')">View Details</button>
+    </div>
+
+    <div id="de-shaw" class="company-details-template">
+        <button class="close-btn" onclick="closeDetails('de-shaw')">Close</button>
+        <h3>DE Shaw - Detailed Information</h3>
+        <p>Founded in 1988, DE Shaw is a global investment and technology development firm. It specializes in quantitative trading, investment management, and technology-driven solutions.</p>
+        <h4>Branches in India</h4>
+        <ul>
+            <li>Bengaluru</li>
+        </ul>
+    </div>
+
+    <!-- Add more companies following the same structure -->
+
+    <!-- JavaScript for search and details functionality -->
+    <script>
+      function showDetails(id) {
+        const details = document.getElementById(id);
+        details.style.display = "block";
+      }
+
+      function closeDetails(id) {
+        const details = document.getElementById(id);
+        details.style.display = "none";
+      }
+
+      // Function to filter companies based on search input
+      function filterCompanies() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const companyCards = document.querySelectorAll('.company-card');
+
+        companyCards.forEach(card => {
+          const companyName = card.getAttribute('data-name').toLowerCase();
+          if (companyName.includes(searchInput)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </div>
+</body>
+</html>

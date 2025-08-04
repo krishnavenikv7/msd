@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science & AI Fields</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbe9e7; /* Warm light pink */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+        header {
+            background: linear-gradient(135deg, #f8e3e0, #f4dcd9); /* Soft warm pink gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Updated Job Card Background Colors Based on #fbe9e7 */
+        .job-card:nth-child(1) { background-color: #fff3f2; } /* Very light pink */
+        .job-card:nth-child(2) { background-color: #ffece9; } /* Slightly lighter */
+        .job-card:nth-child(3) { background-color: #ffe5e1; } /* Soft pink */
+        .job-card:nth-child(4) { background-color: #ffded9; } /* Light pastel */
+        .job-card:nth-child(5) { background-color: #ffd7d1; } /* Subtle pink */
+        .job-card:nth-child(6) { background-color: #ffd0c9; } /* Pale pink */
+        .job-card:nth-child(7) { background-color: #ffcad1; } /* Light tint */
+        .job-card:nth-child(8) { background-color: #ffc3c9; } /* Very pale */
+        .job-card:nth-child(9) { background-color: #ffbbbf; } /* Faint pink */
+        .job-card:nth-child(10) { background-color: #ffb4b7; } /* Barely visible */
+        .job-card:nth-child(11) { background-color: #ffadb1; } /* Ultra-light */
+        .job-card:nth-child(12) { background-color: #ffa7ab; } /* Subtle variation */
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+        .job-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+            color: #444; /* Slightly darker gray for subheadings */
+        }
+        .job-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .job-card li {
+            margin-bottom: 0.5rem;
+        }
+        .job-card button {
+            background-color: #FFB6C1; /* Soft pink for buttons */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #FF69B4; /* Hot pink on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+         /* Button Styling */
+         .go-to-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db; /* Blue background */
+            color: #fff; /* White text */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .go-to-button:hover {
+            background-color: #518db5; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Science & AI</h1>
+        <p>Data Science and Artificial Intelligence involve analyzing data, building predictive models, and developing intelligent systems. These fields are in high demand due to their applications in healthcare, finance, marketing, and more. Freshers earn ₹4–10 lakh, mid-level ₹10–20 lakh, and experienced professionals ₹20–50 lakh. Senior roles can exceed ₹1 crore annually.</p>
+    </header>
+
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Data Scientist</h2>
+                <p>Analyze large datasets and extract actionable insights using Python, R, and SQL.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s or Master’s degree in Data Science, Statistics, or related field.</li>
+                    <li>Proficiency in Python, R, and SQL.</li>
+                    <li>Experience with machine learning frameworks (TensorFlow, PyTorch).</li>
+                    <li>Strong statistical and mathematical foundation.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Machine Learning Engineer</h2>
+                <p>Develop machine learning models and deploy them into production environments.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s or Master’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in Python and ML frameworks (TensorFlow, PyTorch).</li>
+                    <li>Experience with cloud platforms (AWS, GCP, Azure).</li>
+                    <li>Understanding of software deployment practices.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>AI Researcher</h2>
+                <p>Conduct research to advance artificial intelligence algorithms and techniques.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Ph.D. in AI, Machine Learning, or related field (preferred).</li>
+                    <li>Experience in publishing research papers in AI/ML conferences.</li>
+                    <li>Proficiency in Python and deep learning frameworks.</li>
+                    <li>Strong problem-solving and analytical skills.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Data Analyst</h2>
+                <p>Interpret data and provide reports to help businesses make informed decisions.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Data Science, Business Analytics, or related field.</li>
+                    <li>Proficiency in Excel, SQL, and data visualization tools (Tableau, Power BI).</li>
+                    <li>Strong communication and reporting skills.</li>
+                    <li>Experience with statistical analysis.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Business Intelligence Analyst</h2>
+                <p>Create dashboards and visualizations to track key performance indicators.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Business Analytics or related field.</li>
+                    <li>Proficiency in data visualization tools (Tableau, Power BI).</li>
+                    <li>Experience with SQL and database management.</li>
+                    <li>Strong understanding of business metrics and KPIs.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Data Engineer</h2>
+                <p>Build and maintain data pipelines to ensure seamless data flow across systems.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in ETL tools and programming languages (Python, Scala).</li>
+                    <li>Experience with big data technologies (Hadoop, Spark).</li>
+                    <li>Understanding of database design and optimization.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Big Data Engineer</h2>
+                <p>Work with tools like Hadoop and Spark to process and analyze massive datasets.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in big data technologies (Hadoop, Spark, Hive).</li>
+                    <li>Experience with distributed systems and cloud platforms.</li>
+                    <li>Understanding of data warehousing concepts.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>NLP Engineer</h2>
+                <p>Develop natural language processing models for chatbots, voice assistants, and more.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s or Master’s degree in AI, NLP, or related field.</li>
+                    <li>Proficiency in Python and NLP libraries (NLTK, SpaCy).</li>
+                    <li>Experience with deep learning frameworks (TensorFlow, PyTorch).</li>
+                    <li>Strong understanding of linguistics and language models.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Computer Vision Engineer</h2>
+                <p>Build systems that can interpret and analyze visual data from images or videos.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s or Master’s degree in AI, Computer Vision, or related field.</li>
+                    <li>Proficiency in Python and OpenCV.</li>
+                    <li>Experience with deep learning frameworks (TensorFlow, PyTorch).</li>
+                    <li>Understanding of image processing techniques.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>AI Product Manager</h2>
+                <p>Oversee the development and deployment of AI-powered products and solutions.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Business, Computer Science, or related field.</li>
+                    <li>Experience in product management and AI/ML projects.</li>
+                    <li>Strong leadership and communication skills.</li>
+                    <li>Understanding of AI/ML technologies and their applications.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Deep Learning Specialist</h2>
+                <p>Design and implement neural networks for complex tasks like image recognition.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s or Master’s degree in AI, Deep Learning, or related field.</li>
+                    <li>Proficiency in Python and deep learning frameworks (TensorFlow, PyTorch).</li>
+                    <li>Experience with neural network architectures (CNN, RNN).</li>
+                    <li>Strong mathematical foundation in calculus and linear algebra.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Data Architect</h2>
+                <p>Design and manage database systems to support efficient data storage and retrieval.</p>
+                <h3>Eligibility Criteria</h3>
+                <ul>
+                    <li>Bachelor’s degree in Computer Science or related field.</li>
+                    <li>Proficiency in database design and management (SQL, NoSQL).</li>
+                    <li>Experience with data modeling and ETL processes.</li>
+                    <li>Understanding of cloud-based database solutions.</li>
+                </ul>
+                <a href="application_form.html" class="go-to-button">Go to</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

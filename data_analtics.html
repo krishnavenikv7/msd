@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics in E-Commerce</title>
+
+    <!-- Embedded Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa; /* Soft gray-blue background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #bbdefb, #90caf9); /* Soft blue gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+
+        /* Available Roles Section */
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+
+        /* Job Card Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+
+        /* Individual Job Cards */
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Custom Background Colors for Job Cards (Soft Blue and Purple Tones) */
+        .job-card:nth-child(1) { background-color: #e3f2fd; } /* Light blue */
+        .job-card:nth-child(2) { background-color: #ede7f6; } /* Pale purple */
+        .job-card:nth-child(3) { background-color: #f5f5f5; } /* White smoke */
+        .job-card:nth-child(4) { background-color: #e8eaf6; } /* Pale indigo */
+        .job-card:nth-child(5) { background-color: #e3f2fd; } /* Subtle blue */
+        .job-card:nth-child(6) { background-color: #ffffff; } /* Pure white */
+        .job-card:nth-child(7) { background-color: #ede7f6; } /* Soft purple */
+        .job-card:nth-child(8) { background-color: #f5f5fc; } /* Very light purple */
+        .job-card:nth-child(9) { background-color: #fffafa; } /* Snow white */
+        .job-card:nth-child(10) { background-color: #e3f2fd; } /* Lemon chiffon */
+        .job-card:nth-child(11) { background-color: #f8f8fe; } /* Ice purple */
+        .job-card:nth-child(12) { background-color: #ffffff; } /* Pure white */
+
+        /* Hover Effects for Job Cards */
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Job Card Content Styling */
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+
+        /* Button Styling */
+        .job-card button {
+            background-color: #90caf9; /* Soft blue for buttons */
+            color: black; /* Black text color */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #2196f3; /* Vibrant blue on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Data Analytics in E-Commerce</h1>
+        <p>
+            Data Analytics in E-Commerce focuses on leveraging data to optimize customer experiences, improve sales, and enhance operational efficiency. 
+            This field involves analyzing trends, forecasting demand, and personalizing marketing strategies. 
+            Freshers earn ₹4–10 lakh, mid-level professionals ₹10–25 lakh, and experienced roles can exceed ₹50 lakh annually.
+        </p>
+    </header>
+
+    <!-- Available Roles Section -->
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Data Analyst</h2>
+                <p>Analyze e-commerce data to identify trends, customer behavior, and performance metrics.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Business Intelligence Specialist</h2>
+                <p>Create dashboards and reports to provide actionable insights for decision-making.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Marketing Analyst</h2>
+                <p>Evaluate the effectiveness of marketing campaigns and recommend improvements.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Predictive Modeler</h2>
+                <p>Build models to forecast demand, customer churn, and sales trends.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Data Scientist</h2>
+                <p>Use machine learning and statistical analysis to solve complex business problems.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Product Analytics Manager</h2>
+                <p>Analyze product performance and customer feedback to guide product development.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Customer Insights Analyst</h2>
+                <p>Understand customer preferences and behaviors to drive personalization strategies.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Supply Chain Analyst</h2>
+                <p>Analyze supply chain data to optimize inventory management and logistics.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Conversion Rate Optimization Specialist</h2>
+                <p>Improve website performance and increase sales through data-driven strategies.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>A/B Testing Analyst</h2>
+                <p>Design and analyze A/B tests to optimize website features and user experiences.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Data Visualization Expert</h2>
+                <p>Create interactive visualizations to communicate complex data insights effectively.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>Fraud Detection Analyst</h2>
+                <p>Identify and prevent fraudulent activities using advanced analytics techniques.</p>
+                <button>Go to</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

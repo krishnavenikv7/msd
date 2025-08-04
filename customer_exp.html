@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Experience & Support</title>
+
+    <!-- Embedded Styles -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb; /* Soft off-white background */
+            text-align: left; /* Ensure overall text alignment is left */
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #ffe0b2, #ffcc80); /* Soft orange gradient */
+            color: #333; /* Dark text for contrast */
+            padding: 1.5rem;
+            text-align: left; /* Left-align header content */
+            border-radius: 15px; /* Curved edges for the header */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            color: #555; /* Medium gray text */
+        }
+
+        /* Available Roles Section */
+        .available-fields {
+            padding: 2rem;
+        }
+        .available-fields h2 {
+            text-align: left; /* Left-align section heading */
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+
+        /* Job Card Container */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align cards to the left */
+            gap: 1.5rem; /* Added gap for better spacing */
+            padding: 0 1rem;
+        }
+
+        /* Individual Job Cards */
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(23% - 2rem); /* Adjusted width for better spacing */
+            padding: 1.5rem;
+            text-align: left; /* Ensure job card content is left-aligned */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Custom Background Colors for Job Cards (Warm Orange and Blue Tones) */
+        .job-card:nth-child(1) { background-color: #fff3e0; } /* Light orange */
+        .job-card:nth-child(2) { background-color: #e3f2fd; } /* Light blue */
+        .job-card:nth-child(3) { background-color: #fff8e7; } /* Cream */
+        .job-card:nth-child(4) { background-color: #e8f5e9; } /* Pale green */
+        .job-card:nth-child(5) { background-color: #ffebee; } /* Soft red */
+        .job-card:nth-child(6) { background-color: #f3e5f5; } /* Lavender */
+        .job-card:nth-child(7) { background-color: #e1f5fe; } /* Baby blue */
+        .job-card:nth-child(8) { background-color: #fffde7; } /* Yellow cream */
+        .job-card:nth-child(9) { background-color: #f5f5f5; } /* Light gray */
+        .job-card:nth-child(10) { background-color: #e8eaf6; } /* Pale indigo */
+        .job-card:nth-child(11) { background-color: #f9fbe7; } /* Warm beige */
+        .job-card:nth-child(12) { background-color: #e0f7fa; } /* Teal */
+
+        /* Hover Effects for Job Cards */
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Job Card Content Styling */
+        .job-card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #444; /* Slightly darker gray for headings */
+        }
+        .job-card p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #666; /* Medium gray for text */
+        }
+
+        /* Button Styling */
+        .job-card button {
+            background-color: #ffcc80; /* Soft orange for buttons */
+            color: black; /* Black text color */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .job-card button:hover {
+            background-color: #ff9800; /* Vibrant orange on hover */
+            color: white; /* White text on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-card {
+                width: calc(45% - 2rem); /* Adjust for tablets */
+            }
+        }
+        @media (max-width: 480px) {
+            .job-card {
+                width: calc(100% - 2rem); /* Full width on mobile */
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+            .available-fields h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Customer Experience & Support</h1>
+        <p>
+            Customer Experience & Support focuses on delivering exceptional service to customers, ensuring satisfaction, loyalty, and trust. 
+            This field involves resolving issues, gathering feedback, and improving service delivery. 
+            Freshers earn ₹2–6 lakh, mid-level professionals ₹6–15 lakh, and experienced roles can exceed ₹30 lakh annually.
+        </p>
+    </header>
+
+    <!-- Available Roles Section -->
+    <section class="available-fields">
+        <h2>Available Roles</h2>
+        <div class="container">
+            <!-- Job Card 1 -->
+            <div class="job-card">
+                <h2>Customer Support Specialist</h2>
+                <p>Assist customers with queries, complaints, and technical issues via phone, email, or chat.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="job-card">
+                <h2>Customer Success Manager</h2>
+                <p>Ensure customers achieve their goals using your product or service.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="job-card">
+                <h2>Technical Support Engineer</h2>
+                <p>Provide technical assistance and troubleshoot product-related issues for customers.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="job-card">
+                <h2>Feedback Analyst</h2>
+                <p>Analyze customer feedback to identify areas for improvement in products or services.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 5 -->
+            <div class="job-card">
+                <h2>Chatbot Developer</h2>
+                <p>Design and implement AI-powered chatbots to enhance customer support efficiency.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 6 -->
+            <div class="job-card">
+                <h2>Service Quality Manager</h2>
+                <p>Monitor and improve the quality of customer service interactions across teams.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 7 -->
+            <div class="job-card">
+                <h2>Support Team Leader</h2>
+                <p>Lead and train customer support teams to deliver excellent service.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 8 -->
+            <div class="job-card">
+                <h2>Account Manager</h2>
+                <p>Maintain relationships with key clients and ensure their needs are met.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 9 -->
+            <div class="job-card">
+                <h2>Customer Retention Specialist</h2>
+                <p>Develop strategies to retain customers and reduce churn rates.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 10 -->
+            <div class="job-card">
+                <h2>Community Manager</h2>
+                <p>Engage with customers on social media and online forums to build brand loyalty.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 11 -->
+            <div class="job-card">
+                <h2>Complaint Resolution Officer</h2>
+                <p>Handle escalated complaints and resolve them to ensure customer satisfaction.</p>
+                <button>Go to</button>
+            </div>
+
+            <!-- Job Card 12 -->
+            <div class="job-card">
+                <h2>User Experience (UX) Researcher</h2>
+                <p>Conduct research to understand customer pain points and improve service delivery.</p>
+                <button>Go to</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
